@@ -2,17 +2,17 @@ import sqlite3
 from sqlite3 import Error
 from configparser import ConfigParser, ExtendedInterpolation
 
-class DatabaseManager:
+class Database:
     def __init__(self):
         self.read_config()
         self.database_path = self.config['Database']['path']
-        self.schema_path = self.config['Schema']['schema']
+        self.schema_path = self.config['Schema']['path']
 
         self.connection = sqlite3.connect(self.database_path)
-        self.cursor = self.connectionection.cursor()
+        self.cursor = self.connection.cursor()
 
         if self.connection is not None:
-            self.create_tables_from_schema()
+            self.read_schema()
         else:
             print("Error! Cannot create the database connection.")
 
@@ -47,22 +47,22 @@ class DatabaseManager:
             
 # =============================================================================
 
-if __name__ == "__main__":
-    # Initialize the database and schema
-    db = DatabaseManager("mydatabase.db", "schema.sql")
+# if __name__ == "__main__":
+#     # Initialize the database and schema
+#     db = Database("mydatabase.db", "schema.sql")
     
-    # Example usage
-    # Insert a record
-    db.insert("users", ["name", "age"], ["Alice", 30])
+#     # Example usage
+#     # Insert a record
+#     db.insert("users", ["name", "age"], ["Alice", 30])
 
-    # Select all users
-    db.select("users")
+#     # Select all users
+#     db.select("users")
 
-    # Update a record
-    db.update("users", {"name": "Bob"}, "name = 'Alice'")
+#     # Update a record
+#     db.update("users", {"name": "Bob"}, "name = 'Alice'")
 
-    # Delete a record
-    db.delete("users", "name = 'Bob'")
+#     # Delete a record
+#     db.delete("users", "name = 'Bob'")
 
-    # Close the database connection
-    db.close()
+#     # Close the database connection
+#     db.close()
