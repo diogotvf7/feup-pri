@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from scraper import get_article_information
 from database.database import Database
 
 articles = [
@@ -16,7 +17,7 @@ def reject_cookies():
     else:
         print("No cookies to reject.")
 
-database = Database()
+#database = Database()
 
 print("Starting the web driver...")
 driver = webdriver.Firefox()
@@ -28,8 +29,7 @@ print("Waiting for the page to load...")
 driver.implicitly_wait(2)
 
 reject_cookies()
-
-
+get_article_information(driver)
 
 
 driver.implicitly_wait(0.5)
