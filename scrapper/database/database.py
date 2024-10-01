@@ -9,10 +9,10 @@ class Database:
         self.schema_path = self.config['Schema']['path']
 
         self.connection = sqlite3.connect(self.database_path)
-        self.cursor = self.connectionection.cursor()
+        self.cursor = self.connection.cursor()
 
         if self.connection is not None:
-            self.create_tables_from_schema()
+            self.read_schema()
         else:
             print("Error! Cannot create the database connection.")
 

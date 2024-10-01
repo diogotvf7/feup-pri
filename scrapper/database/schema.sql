@@ -3,12 +3,12 @@ CREATE TABLE IF NOT EXISTS `article` (
     `title` TEXT NOT NULL,
     `author` TEXT NOT NULL,
     `created_at` TEXT NOT NULL,
-    `body` TEXT NOT NULL,
+    `body` TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS stocks (
+CREATE TABLE IF NOT EXISTS `stocks` (
     `id` INTEGER PRIMARY KEY AUTOINCREMENT,    -- Unique identifier for each stock entry
-    `ticker_symbol` TEXT NOT NULL,             -- Ticker symbol of the stock (e.g., 'AAPL' for Apple)
+    `ticker_symbol` TEXT NOT NULL UNIQUE,             -- Ticker symbol of the stock (e.g., 'AAPL' for Apple)
     `company_name` TEXT NOT NULL,              -- Full name of the company (e.g., 'Apple Inc.')
     `sector` TEXT,                             -- Sector to which the company belongs (e.g., 'Technology')
     `industry` TEXT,                           -- Industry within the sector (e.g., 'Consumer Electronics')
@@ -18,9 +18,8 @@ CREATE TABLE IF NOT EXISTS stocks (
     `pe_ratio` REAL,                           -- Price-to-Earnings ratio (P/E ratio)
     `dividend_yield` REAL,                     -- Dividend yield percentage (e.g., 0.5%)
     `fifty_two_week_high` REAL,                -- 52-week high price
-    `fifty_two_week_low` REAL,                 -- 52-week low price
-    `date_last_updated` DATE NOT NULL DEFAULT (DATE('now')),  -- Last updated date for this entry
-    UNIQUE (ticker_symbol)                   -- Ensure the ticker symbol is unique in the database
+    `fifty_two_week_low` REAL                  -- 52-week low price
+    -- `date_last_updated` DATE NOT NULL DEFAULT (DATE('now')),  -- Last updated date for this entry
 );
 
 CREATE TABLE IF NOT EXISTS `stock_change` (
