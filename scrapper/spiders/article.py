@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from models.article import Article
+import models
 
 # TODO: Add this information to the database
 def read_article(driver, link):
@@ -21,4 +21,4 @@ def read_article(driver, link):
     for paragraph in paragraphs:
         article_text += paragraph.text + " " 
 
-    return Article(title, authors, created_at, article_text)
+    return models.Article(title, authors, created_at, article_text)
