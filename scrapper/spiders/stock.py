@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from models.stock import Stock
+
 
 def read_stock_change(driver):
 
@@ -19,7 +21,9 @@ def get_element_text(driver, locator_type, locator_value):
     except:
         return "N/A" 
 
-def read_stock(driver):
+def read_stock(driver, link):
+    driver.get(link)
+
     stock_data = {
         "Stock Title": (By.CSS_SELECTOR, "h1.yf-xxbei9"),
         "Live Price": (By.CLASS_NAME, "livePrice"),
@@ -42,10 +46,16 @@ def read_stock(driver):
         "Ex-Dividend Date": (By.XPATH, "//*[@class='yf-mrt107']/*[15]/*[2]"),
         "1y Target Est": (By.XPATH, "//*[@class='yf-mrt107']/*[16]/*[2]"),
     }
-
+    # Not sure what to do with '--' values -> treat as null?
+    
+    stock_args = {}
     for label, locator in stock_data.items():
         text = get_element_text(driver, locator[0], locator[1])
-        print(f"{label}: {text}")
+        if text:
+            stock_args[label] = text
+
+    stock = Stock(**stock_args)
+    return stock
 
 
 
