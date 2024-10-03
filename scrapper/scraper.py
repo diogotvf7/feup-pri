@@ -38,3 +38,20 @@ def reject_cookies(driver):
         print("Cookies rejected.")
     else:
         print("No cookies to reject.")
+
+def get_stock_change(driver):
+    try: 
+        carousel = driver.find_element(By.CLASS_NAME, "carousel-top")
+    except:
+        print("No stock carousel found.")
+        return
+    try:
+        stock_changes = carousel.find_elements(By.CLASS_NAME, "ticker")
+    except:
+        print("No stock changes found.")
+        return
+
+    for stock in stock_changes:
+        stock_name = stock.get_attribute("title")
+        percent_change = stock.find_element(By.CLASS_NAME, "percentChange").find_element(By.XPATH, ".//span").text
+        print("Stock change: " + stock_name + ":  "  + percent_change)
