@@ -1,12 +1,12 @@
 CREATE TABLE IF NOT EXISTS `article` (
     `id` INTEGER PRIMARY KEY AUTOINCREMENT,
     `title` TEXT NOT NULL,
-    `author` TEXT NOT NULL,
+    `authors` TEXT NOT NULL,
     `created_at` TEXT NOT NULL,
     `body` TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `stocks` (
+CREATE TABLE IF NOT EXISTS `stock` (
     `id` INTEGER PRIMARY KEY AUTOINCREMENT,    -- Unique identifier for each stock entry
     `ticker_symbol` TEXT NOT NULL UNIQUE,             -- Ticker symbol of the stock (e.g., 'AAPL' for Apple)
     `company_name` TEXT NOT NULL,              -- Full name of the company (e.g., 'Apple Inc.')
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `stock_change` (
     FOREIGN KEY(`stock_id`) REFERENCES `stocks`(`id`) ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS `article_stock_change` (
+CREATE TABLE IF NOT EXISTS `article__stock_change` (
     `article_id` INTEGER NOT NULL,
     `stock_change_id` INTEGER NOT NULL,
     FOREIGN KEY(`article_id`) REFERENCES `article`(`id`) ON DELETE CASCADE
