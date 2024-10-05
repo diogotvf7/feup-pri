@@ -3,15 +3,15 @@ from selenium.webdriver.common.by import By
 from models.stock import Stock
 
 
-def read_stock_change(driver):
+# def read_stock_change(driver):
 
-    names = driver.find_element(By.XPATH, "//a[@class, 'ticker medium']")
-    print(names)
-    names = ""
-    for author in names:
-        names += author.text + " "
+#     names = driver.find_element(By.XPATH, "//a[@class, 'ticker']")
+#     print(names)
+#     names = ""
+#     for author in names:
+#         names += author.text + " "
     
-    return
+#     return
     
 
 

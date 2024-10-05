@@ -25,10 +25,19 @@ spiders.reject_cookies(driver)
 
 articles = []
 stocks = []
+stock_changes = []
 
 for article_url in articles_links:
     article = spiders.read_article(driver, article_url)
     articles.append(article.__dict__)
+
+
+    print("Reading stock changes")
+    stock_change = spiders.read_stock_change(driver, article_url)
+    stock_changes.append(stock_change)
+    print("Stock changes read")
+
+
 
 for stock_url in stocks_links:
     stock = spiders.read_stock(driver, stock_url)
@@ -37,7 +46,8 @@ for stock_url in stocks_links:
 
 combined_data = {
     "articles": articles,
-    "stocks": stocks
+    "stocks": stocks,
+    "stock_changes": stock_changes
 }
 
 with open('articles.json', 'w') as f:
