@@ -1,9 +1,11 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 
+import os
 import spiders
-
 import json
+
+os.makedirs("database", exist_ok=True)
+
 
 homepage = "https://finance.yahoo.com/"
 articles_links = [
@@ -44,14 +46,15 @@ for stock_url in stocks_links:
     stocks.append(stock.stock_data)
 
 
-combined_data = {
-    "articles": articles,
-    "stocks": stocks,
-    "stock_changes": stock_changes
-}
 
-with open('articles.json', 'w') as f:
-    json.dump(combined_data, f, indent=4)
+with open('database/article.json', 'w') as f:
+    json.dump(articles, f, indent=4)
+
+with open('database/stock.json', 'w') as f:
+    json.dump(stocks, f, indent=4)
+
+with open('database/stock_change.json', 'w') as f:
+    json.dump(stock_changes, f, indent=4)
 
 
 
