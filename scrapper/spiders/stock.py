@@ -46,12 +46,11 @@ def read_stock(driver, link):
         "Ex-Dividend Date": (By.XPATH, "//*[@class='yf-mrt107']/*[15]/*[2]"),
         "1y Target Est": (By.XPATH, "//*[@class='yf-mrt107']/*[16]/*[2]"),
     }
-    # Not sure what to do with '--' values -> treat as null?
     
     stock_args = {}
     for label, locator in stock_data.items():
         text = get_element_text(driver, locator[0], locator[1])
-        if text:
+        if (text != "--"):
             stock_args[label] = text
 
     stock = Stock(**stock_args)

@@ -2,15 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import models
 
-# TODO: Add this information to the database
 def read_article(driver, link):
     driver.get(link)
     
     title = driver.find_element(By.CLASS_NAME, "cover-title").text
 
-    authors = driver.find_element(By.CLASS_NAME, "byline-attr-author").find_elements(By.XPATH, ".//a")
+    #Problem here - inconsistent in the website
+    authors_element = driver.find_element(By.CLASS_NAME, "byline-attr-author")
+    authors_links = authors_element.find_elements(By.XPATH, ".//a")
     authors = ""
-    for author in authors:
+    for author in (authors_links):
         authors += author.text + " "
 
     created_at = driver.find_element(By.CLASS_NAME, "byline-attr-meta-time").text

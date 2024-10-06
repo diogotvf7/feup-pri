@@ -31,8 +31,7 @@ class Stock:
             else:
                 raise ValueError(f"'{key}' is not a valid stock attribute.")
             
-    def dump(self):
-        return json.dumps(self.__dict__)
-            
-
+    def to_dict(self):
+        filtered_dict = {key: value for key, value in self.stock_data.items() if value is not None}
+        return filtered_dict
             
