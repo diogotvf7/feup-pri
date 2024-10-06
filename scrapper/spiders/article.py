@@ -7,12 +7,33 @@ def read_article(driver, link):
     
     title = driver.find_element(By.CLASS_NAME, "cover-title").text
 
-    #Problem here - inconsistent in the website
     authors_element = driver.find_element(By.CLASS_NAME, "byline-attr-author")
-    authors_links = authors_element.find_elements(By.XPATH, ".//a")
     authors = ""
-    for author in (authors_links):
-        authors += author.text + " "
+    authors_links = authors_element.find_elements(By.XPATH, ".//a")
+
+    if authors_links:  
+        authors_list = [author.text.strip() for author in authors_links]
+        authors = " ".join(authors_list)
+
+    else: 
+        authors_text = authors_element.text.strip()
+        if (" and " in authors_text) and ("," in authors_text):
+            comma_split = [name.strip() for name in authors_text.split(",")]
+
+            last_part = comma_split.pop() 
+            last_authors = [name.strip() for name in last_part.split(" and ")]
+
+            authors_list = comma_split + last_authors
+        elif " and " in authors_text:
+            authors_list = [name.strip() for name in authors_text.split(" and ")]
+        elif "," in authors_text:  
+            authors_list = [name.strip() for name in authors_text.split(",")]
+        else:  
+            authors_list = [authors_text]
+
+        authors = " ".join(authors_list)
+
+    print(authors_list)  
 
     created_at = driver.find_element(By.CLASS_NAME, "byline-attr-meta-time").text
 
