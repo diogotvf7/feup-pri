@@ -9,8 +9,15 @@ class Article:
         self.body = body
         self.stocks_changes = stocks_changes
     
-    def dump(self):
-        return json.dumps(self.__dict__)
+    def to_dict(self):
+        filtered_dict = {
+            'title': self.title,
+            'author': self.author,
+            'created_at': self.created_at,
+            'body': self.body,
+            'stocks_changes': self.stocks_changes
+        }
+        return {key: value for key, value in filtered_dict.items() if value is not None}
     
     def __str__(self):
         return f"Title: {self.title}\nAuthor: {self.author}\nDate: {self.created_at}\nBody: {self.body}\nStocks Changes: {self.stocks_changes}"
