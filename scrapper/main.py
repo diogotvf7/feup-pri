@@ -31,17 +31,12 @@ stocks = []
 stock_changes = []
 
 for article_url in articles_links:
-    # article = spiders.read_article(driver, article_url)
-    # articles.append(article)
+    article = spiders.read_article(driver, article_url)
+    articles.append(article)
 
-    stock_change = spiders.read_stock_change(driver, article_url)
-    
-    if stock_change is not None:
-        stock_changes.append(stock_change) 
-
-#for stock_url in stocks_links:
-    # stock = spiders.read_stock(driver, stock_url)
-    # stocks.append(stock)
+for stock_url in stocks_links:
+    stock = spiders.read_stock(driver, stock_url)
+    stocks.append(stock)
 
 
 
