@@ -4,15 +4,15 @@ from models.stock_change import StockChange
 
 def read_stock_change(driver, link):
     driver.get(link)
-    try: 
+    try:
         carousel = driver.find_element(By.CLASS_NAME, "carousel-top")
     except:
         print("No stock carousel found.")
-        return "N/A"
+        return
     stock_changes = carousel.find_elements(By.CLASS_NAME, "ticker")
-    if (len(stock_changes) == 0):
+    if len(stock_changes) == 0:
         print("No stock changes found.")
-        return "N/A"
+        return
     
     stock_objects = []
     for stock in stock_changes:

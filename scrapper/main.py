@@ -20,7 +20,7 @@ stocks_links = [
 ]
 
 print("Starting the web driver...")
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 print("Web driver started.")
 
 driver.get(homepage)
@@ -33,9 +33,6 @@ stock_changes = []
 for article_url in articles_links:
     article = spiders.read_article(driver, article_url)
     articles.append(article)
-
-    stock_change = spiders.read_stock_change(driver, article_url)
-    stock_changes.append(stock_change)
 
 for stock_url in stocks_links:
     stock = spiders.read_stock(driver, stock_url)

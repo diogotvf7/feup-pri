@@ -1,9 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from .stock_change import read_stock_change
 import models
 
+
 def read_article(driver, link):
-    driver.get(link)
+    driver.get(link)    
     
     title = driver.find_element(By.CLASS_NAME, "cover-title").text
 
@@ -41,6 +43,8 @@ def read_article(driver, link):
     paragraphs = body.find_elements(By.XPATH, ".//p")
     article_text = ""
     for paragraph in paragraphs:
-        article_text += paragraph.text + " " 
+        article_text += paragraph.text + " "
+    
+    stock_changes = read_stock_change(driver, link)
 
-    return models.Article(title, authors, created_at, article_text)
+    return models.Article(title, authors, created_at, article_text, stock_changes)
