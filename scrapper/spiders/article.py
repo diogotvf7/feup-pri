@@ -1,19 +1,19 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from .stock_change import read_stock_change
 import models
 
+
 def read_article(driver, link):
-    driver.get(link)
+    driver.get(link)    
     
     title = driver.find_element(By.CLASS_NAME, "cover-title").text
 
     authors_element = driver.find_element(By.CLASS_NAME, "byline-attr-author")
-    authors = ""
     authors_links = authors_element.find_elements(By.XPATH, ".//a")
 
     if authors_links:  
         authors_list = [author.text.strip() for author in authors_links]
-        authors = " ".join(authors_list)
 
     else: 
         authors_text = authors_element.text.strip()
@@ -31,8 +31,6 @@ def read_article(driver, link):
         else:  
             authors_list = [authors_text]
 
-        authors = " ".join(authors_list)
-
 
     created_at = driver.find_element(By.CLASS_NAME, "byline-attr-meta-time").text
 
@@ -40,6 +38,8 @@ def read_article(driver, link):
     paragraphs = body.find_elements(By.XPATH, ".//p")
     article_text = ""
     for paragraph in paragraphs:
-        article_text += paragraph.text + " " 
+        article_text += paragraph.text + " "
+    
+    stock_changes = read_stock_change(driver, link)
 
-    return models.Article(title, created_at, article_text, authors=authors_list if authors_list else None)
+    return models.Article(title, created_at, article_text, stock_changes, authors=authors_list if authors_list else None)
