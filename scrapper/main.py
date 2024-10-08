@@ -20,7 +20,7 @@ stocks_links = [
 ]
 
 print("Starting the web driver...")
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 print("Web driver started.")
 
 driver.get(homepage)

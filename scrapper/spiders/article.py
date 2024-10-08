@@ -33,7 +33,6 @@ def read_article(driver, link):
 
         authors = " ".join(authors_list)
 
-    print(authors_list)  
 
     created_at = driver.find_element(By.CLASS_NAME, "byline-attr-meta-time").text
 
@@ -43,4 +42,4 @@ def read_article(driver, link):
     for paragraph in paragraphs:
         article_text += paragraph.text + " " 
 
-    return models.Article(title, authors, created_at, article_text)
+    return models.Article(title, created_at, article_text, authors=authors_list if authors_list else None)
