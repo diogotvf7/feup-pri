@@ -65,7 +65,7 @@ articles_li = articles_ul.find_elements(By.TAG_NAME, 'li')
 for article in articles_li:
     try:
         url = article.find_element(By.TAG_NAME, 'a').get_attribute('href')
-        if url.startswith('https://finance.yahoo'):
+        if url.startswith('https://finance.yahoo.com/news'):
             articles_links.append(url)
     except NoSuchElementException:
         next
@@ -79,12 +79,12 @@ print(len(articles_links) != len(set(articles_links)))
 #     stock = spiders.read_stock(driver, stock_url)
 #     stocks.append(stock)
 
-# for article_url in articles_links:
-#     article = spiders.read_article(driver, article_url)
-#     articles.append(article)
+for article_url in articles_links:
+    article = spiders.read_article(driver, article_url)
+    articles.append(article)
 
-#     stock_change = spiders.read_stock_change(driver, article_url)
-#     stock_changes.append(stock_change)
+    stock_change = spiders.read_stock_change(driver, article_url)
+    stock_changes.append(stock_change)
 
 # for stock_url in stocks_links:
 #     stock = spiders.read_stock(driver, stock_url)
@@ -92,8 +92,8 @@ print(len(articles_links) != len(set(articles_links)))
 
 
 
-# with open('database/article.json', 'w') as f:
-#     json.dump([article.to_dict() for article in articles], f, indent=4)
+with open('database/article.json', 'w') as f:
+    json.dump([article.to_dict() for article in articles], f, indent=4)
 
 # with open('database/stock.json', 'w') as f:
 #     json.dump([stock.to_dict() for stock in stocks], f, indent=4)
