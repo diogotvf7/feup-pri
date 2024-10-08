@@ -46,9 +46,6 @@ with open('database/article.json', 'w') as f:
 with open('database/stock.json', 'w') as f:
     json.dump([stock.to_dict() for stock in stocks], f, indent=4)
 
-with open('database/stock_change.json', 'w') as f:
-    json.dump(stock_changes, f, indent=4)
-
 
 driver.close()
 

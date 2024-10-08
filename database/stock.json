@@ -1,1 +1,44 @@
-[]
+[
+    {
+        "Stock Title": "Amazon.com, Inc. (AMZN)",
+        "Live Price": "180.80",
+        "Price Change": "-5.71",
+        "Price Change Percentage": "(-3.06%)",
+        "Previous Close": "186.51",
+        "Open": "182.97",
+        "Bid": "180.68 x 500",
+        "Ask": "183.00 x 100",
+        "Day's Range": "180.25 - 183.59",
+        "52 Week Range": "118.35 - 201.20",
+        "Volume": "41,292,503",
+        "Average Volume": "40,375,056",
+        "Market Cap (intraday)": "1.898T",
+        "Beta (5Y Monthly)": "1.15",
+        "PE Ratio (TTM)": "43.15",
+        "EPS (TTM)": "4.19",
+        "Earnings Date": "Oct 24, 2024 - Oct 28, 2024",
+        "1y Target Est": "218.53"
+    },
+    {
+        "Stock Title": "NIKE, Inc. (NKE)",
+        "Live Price": "80.83",
+        "Price Change": "-1.42",
+        "Price Change Percentage": "(-1.73%)",
+        "Previous Close": "82.25",
+        "Open": "82.14",
+        "Bid": "79.86 x 1000",
+        "Ask": "80.20 x 900",
+        "Day's Range": "80.09 - 82.47",
+        "52 Week Range": "70.75 - 123.39",
+        "Volume": "9,989,657",
+        "Average Volume": "13,463,520",
+        "Market Cap (intraday)": "120.315B",
+        "Beta (5Y Monthly)": "1.02",
+        "PE Ratio (TTM)": "23.16",
+        "EPS (TTM)": "3.49",
+        "Earnings Date": "Dec 19, 2024 - Dec 23, 2024",
+        "Forward Dividend & Yield": "1.48 (1.83%)",
+        "Ex-Dividend Date": "Sep 3, 2024",
+        "1y Target Est": "91.80"
+    }
+]
