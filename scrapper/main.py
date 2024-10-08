@@ -46,6 +46,9 @@ for article in articles_li:
         next
 
 print(articles_links)
+for stock_url in stocks_links:
+    stock = spiders.read_stock(driver, stock_url)
+    stocks.append(stock)
 
 
 

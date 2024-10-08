@@ -1,18 +1,18 @@
-import json
 #from stock_change import StockChange
 
 class Article:
-    def __init__(self, title, author, created_at, body, stocks_changes=None):
+    def __init__(self, title, created_at, body, stocks_changes=None , authors = None):
         self.title = title
-        self.author = author
         self.created_at = created_at
         self.body = body
         self.stocks_changes = stocks_changes
+        self.author = authors
+
     
     def to_dict(self):
         filtered_dict = {
             'title': self.title,
-            'author': self.author,
+            'authors': self.author,
             'created_at': self.created_at,
             'body': self.body,
             'stocks_changes': self.stocks_changes
