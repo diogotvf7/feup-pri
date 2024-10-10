@@ -10,13 +10,15 @@ def read_stock_change(driver, link):
         print("No stock carousel found.")
         return "N/A"
     stock_changes = carousel.find_elements(By.CLASS_NAME, "ticker")
-    if (len(stock_changes) == 0):
+    if len(stock_changes) == 0:
         print("No stock changes found.")
         return "N/A"
     
+    print(f"Found {len(stock_changes)} stock changes.")
+
     stock_objects = []
     for stock in stock_changes:
-        stock_name = stock.get_attribute("title")
+        stock_name = stock.get_property("title")
         percent_change = stock.find_element(By.CLASS_NAME, "percentChange").find_element(By.XPATH, ".//span").text
         stock_objects.append(StockChange(stock_name, percent_change).__dict__)
 

@@ -5,6 +5,8 @@ import models
 def read_article(driver, link):
     driver.get(link)
     
+    driver.implicitly_wait(2)
+
     title = driver.find_element(By.CLASS_NAME, "cover-title").text
 
     authors_element = driver.find_element(By.CLASS_NAME, "byline-attr-author")
