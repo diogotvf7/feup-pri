@@ -26,7 +26,11 @@
         "Price Change Percentage": "(-1.73%)",
         "Previous Close": "82.25",
         "Open": "82.14",
+<<<<<<< HEAD
+        "Bid": "79.95 x 1000",
+=======
         "Bid": "79.86 x 1000",
+>>>>>>> 0f89deea97a7263bbfeaadca8f8b2d8ad322091d
         "Ask": "80.20 x 900",
         "Day's Range": "80.09 - 82.47",
         "52 Week Range": "70.75 - 123.39",

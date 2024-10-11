@@ -1,3 +1,4 @@
+from datetime import datetime
 
 class Stock:
     def __init__(self, **kwargs):
@@ -21,7 +22,8 @@ class Stock:
             "Earnings Date": None,
             "Forward Dividend & Yield": None,
             "Ex-Dividend Date": None,
-            "1y Target Est": None
+            "1y Target Est": None,
+            "date": datetime.now().strftime("%m/%d/%Y")
         }
 
         for key, value in kwargs.items():

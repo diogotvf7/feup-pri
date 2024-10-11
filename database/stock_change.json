@@ -1,0 +1,54 @@
+[
+    [
+        {
+            "name": "TGT",
+            "value": "-2.54%"
+        },
+        {
+            "name": "WMT",
+            "value": "-2.27%"
+        },
+        {
+            "name": "KR",
+            "value": "+0.13%"
+        },
+        {
+            "name": "PEP",
+            "value": "-0.45%"
+        },
+        {
+            "name": "AMZN",
+            "value": "-3.06%"
+        }
+    ],
+    [
+        {
+            "name": "TGT",
+            "value": "-2.54%"
+        },
+        {
+            "name": "AMZN",
+            "value": "-3.06%"
+        },
+        {
+            "name": "EBAY",
+            "value": "+0.72%"
+        },
+        {
+            "name": "WMT",
+            "value": "-2.27%"
+        },
+        {
+            "name": "JWN",
+            "value": "-0.27%"
+        }
+    ],
+    "N/A",
+    "N/A",
+    [
+        {
+            "name": "2317.TW",
+            "value": "-1.77%"
+        }
+    ]
+]
