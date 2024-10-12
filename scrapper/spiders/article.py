@@ -1,12 +1,27 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from .stock_change import read_stock_change
 import models
+from time import sleep
+from datetime import datetime
+
+def parse_date(date_str):
+    
+    try:
+        date_obj = datetime.strptime(date_str, "%a, %b %d, %Y, %I:%M %p")
+        return date_obj.strftime("%d/%m/%Y")
+    except ValueError:
+        try:
+            date_test = date_str.split(" at ")[0]
+            date_obj = datetime.strptime(date_test, "%a, %B %d, %Y")
+            return date_obj.strftime("%d/%m/%Y")
+        except ValueError:
+            return "Invalid Data Format"
 
 
 def read_article(driver, link):
     driver.get(link)    
     
+    sleep(0.7)
     title = driver.find_element(By.CLASS_NAME, "cover-title").text
 
     authors_element = driver.find_element(By.CLASS_NAME, "byline-attr-author")
@@ -33,6 +48,7 @@ def read_article(driver, link):
 
 
     created_at = driver.find_element(By.CLASS_NAME, "byline-attr-meta-time").text
+    formatted_date = parse_date(created_at)
 
     body = driver.find_element(By.CLASS_NAME, "body")
     paragraphs = body.find_elements(By.XPATH, ".//p")
@@ -42,4 +58,4 @@ def read_article(driver, link):
     
     stock_changes = read_stock_change(driver, link)
 
-    return models.Article(title, created_at, article_text, stock_changes, authors=authors_list if authors_list else None)
+    return models.Article(title, formatted_date, article_text, stock_changes, authors=authors_list if authors_list else None)

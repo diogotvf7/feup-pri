@@ -15,7 +15,7 @@ articles_links = set()
 stocks_links = set()
 
 print("Starting the web driver...")
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 print("Web driver started.")
 
 driver.get(homepage)
@@ -95,39 +95,53 @@ def get_stock_links(driver, s_links):
         s_links.update(temp_links)
 
 get_article_links(driver, articles_links)
-
 print(len(articles_links))
-print(articles_links)
 
+#print(articles_links)
+
+""" 
 get_stock_links(driver, stocks_links)
 
 print(len(stocks_links))
-print(stocks_links)
+#print(stocks_links)
+
+counter = 0
+stocks_links_list = list(stocks_links)  # Convert the set to a list
 
 
-# for stock_url in stocks_links:
-#     stock = spiders.read_stock(driver, stock_url)
-#     stocks.append(stock)
+for i in range(0, len(stocks_links_list)):
+    print("Read stock: " + stocks_links_list[i] + " number " + str(counter))
+    stock = spiders.read_stock(driver, stocks_links_list[i])
+    if stock is not None:
+        stocks.append(stock)
 
-# for article_url in articles_links:
-#     article = spiders.read_article(driver, article_url)
-#     articles.append(article)
+    if (i % 100 == 0):  
+        driver = webdriver.Firefox()
+        driver.get(homepage)
+        spiders.reject_cookies(driver)
+    counter += 1 """
 
-#     stock_change = spiders.read_stock_change(driver, article_url)
-#     stock_changes.append(stock_change)
+""" counter = 0
+articles_links_list = list(articles_links)
+for i in range(0, len(articles_links)):
+    if(articles_links_list[i] != "https://finance.yahoo.com/news/home-furniture-retailer-stocks-q2-075938416.html"):
+        print("Read article: " + articles_links_list[i] + " number " + str(counter))
+        counter += 1
+        article = spiders.read_article(driver, articles_links_list[i])
+        articles.append(article)
 
-# for stock_url in stocks_links:
-#     stock = spiders.read_stock(driver, stock_url)
-#     stocks.append(stock)
+        if (i % 100 == 0):  
+            driver = webdriver.Firefox()
+            driver.get(homepage)
+            spiders.reject_cookies(driver)
 
-# with open('database/article.json', 'w') as f:
-#     json.dump([article.to_dict() for article in articles], f, indent=4)
 
-# with open('database/stock.json', 'w') as f:
-#     json.dump([stock.to_dict() for stock in stocks], f, indent=4)
+with open('database/article.json', 'w', encoding='utf-8') as f:
+    json.dump([article.to_dict() for article in articles], f, indent=4, ensure_ascii=False)
 
-# with open('database/stock_change.json', 'w') as f:
-#     json.dump(stock_changes, f, indent=4)
+with open('database/stock.json', 'w', encoding='utf-8') as f:
+    json.dump([stock.to_dict() for stock in stocks], f, indent=4, ensure_ascii=False) """
+
 
 
 driver.close()

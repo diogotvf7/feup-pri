@@ -1,5 +1,7 @@
-from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.support import expected_conditions as EC
 from models.stock import Stock
 
 
@@ -11,6 +13,15 @@ def get_element_text(driver, locator_type, locator_value):
 
 def read_stock(driver, link):
     driver.get(link)
+
+    try:
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "h1.yf-xxbei9"))
+        )
+    except TimeoutException:
+        print("Page took too long to load or stock title not found.")
+        return None
+    
 
     stock_data = {
         "Stock Title": (By.CSS_SELECTOR, "h1.yf-xxbei9"),
