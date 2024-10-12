@@ -94,12 +94,12 @@ def get_stock_links(driver, s_links):
 
         s_links.update(temp_links)
 
-get_article_links(driver, articles_links)
+""" get_article_links(driver, articles_links)
 print(len(articles_links))
-
+ """
 #print(articles_links)
 
-""" 
+
 get_stock_links(driver, stocks_links)
 
 print(len(stocks_links))
@@ -119,7 +119,7 @@ for i in range(0, len(stocks_links_list)):
         driver = webdriver.Firefox()
         driver.get(homepage)
         spiders.reject_cookies(driver)
-    counter += 1 """
+    counter += 1 
 
 """ counter = 0
 articles_links_list = list(articles_links)
@@ -137,10 +137,10 @@ for i in range(0, len(articles_links)):
 
 
 with open('database/article.json', 'w', encoding='utf-8') as f:
-    json.dump([article.to_dict() for article in articles], f, indent=4, ensure_ascii=False)
+    json.dump([article.to_dict() for article in articles], f, indent=4, ensure_ascii=False) """
 
 with open('database/stock.json', 'w', encoding='utf-8') as f:
-    json.dump([stock.to_dict() for stock in stocks], f, indent=4, ensure_ascii=False) """
+    json.dump([stock.to_dict() for stock in stocks], f, indent=4, ensure_ascii=False)
 
 
 
