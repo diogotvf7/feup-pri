@@ -44,7 +44,7 @@ class Stock:
             "Forward Dividend & Yield": None,
             "Ex-Dividend Date": None,
             "1y Target Est": None,
-            "date": datetime.now().strftime("%m/%d/%Y")
+            "date": datetime.now().strftime("%d/%m/%Y")
         }
 
         for key, value in kwargs.items():
