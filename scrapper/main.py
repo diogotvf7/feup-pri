@@ -15,7 +15,7 @@ articles_links = set()
 stocks_links = set()
 
 print("Starting the web driver...")
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 print("Web driver started.")
 
 driver.get(homepage)
@@ -94,16 +94,14 @@ def get_stock_links(driver, s_links):
 
         s_links.update(temp_links)
 
-""" get_article_links(driver, articles_links)
+get_article_links(driver, articles_links)
 print(len(articles_links))
- """
-#print(articles_links)
+ 
 
 
 get_stock_links(driver, stocks_links)
 
 print(len(stocks_links))
-#print(stocks_links)
 
 counter = 0
 stocks_links_list = list(stocks_links)  # Convert the set to a list
@@ -121,7 +119,7 @@ for i in range(0, len(stocks_links_list)):
         spiders.reject_cookies(driver)
     counter += 1 
 
-""" counter = 0
+counter = 0
 articles_links_list = list(articles_links)
 for i in range(0, len(articles_links)):
     if(articles_links_list[i] != "https://finance.yahoo.com/news/home-furniture-retailer-stocks-q2-075938416.html"):
@@ -135,14 +133,23 @@ for i in range(0, len(articles_links)):
             driver.get(homepage)
             spiders.reject_cookies(driver)
 
+def load_json_data(filepath):
+    if os.path.exists(filepath):  
+        with open(filepath, 'r', encoding='utf-8') as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return []
+    return []  
 
-with open('database/article.json', 'w', encoding='utf-8') as f:
-    json.dump([article.to_dict() for article in articles], f, indent=4, ensure_ascii=False) """
+def append_to_json(filepath, new_data):
+    current_data = load_json_data(filepath)  
+    current_data.extend(new_data)  
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(current_data, f, indent=4, ensure_ascii=False)  
 
-with open('database/stock.json', 'w', encoding='utf-8') as f:
-    json.dump([stock.to_dict() for stock in stocks], f, indent=4, ensure_ascii=False)
-
-
+append_to_json('database/article.json', [article.to_dict() for article in articles])
+append_to_json('database/stock.json', [stock.to_dict() for stock in stocks])
 
 driver.close()
 
