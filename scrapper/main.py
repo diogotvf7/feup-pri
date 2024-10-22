@@ -9,7 +9,8 @@ import os, spiders, json
 os.makedirs("database", exist_ok=True)
 
 homepage = "https://finance.yahoo.com"
-article_page = "https://finance.yahoo.com/topic/stock-market-news"
+#article_page = "https://finance.yahoo.com/topic/stock-market-news"
+article_page = "https://finance.yahoo.com/topic/latest-news/"
 stock_pages = ["https://finance.yahoo.com/markets/stocks/most-active", "https://finance.yahoo.com/markets/stocks/gainers", "https://finance.yahoo.com/markets/stocks/losers"]
 articles_links = set()
 stocks_links = set()
@@ -94,12 +95,12 @@ def get_stock_links(driver, s_links):
 
         s_links.update(temp_links)
 
-""" get_article_links(driver, articles_links)
-print(len(articles_links)) """
+get_article_links(driver, articles_links)
+print(len(articles_links))
  
 
 
-get_stock_links(driver, stocks_links)
+""" get_stock_links(driver, stocks_links)
 
 print(len(stocks_links))
 
@@ -120,23 +121,25 @@ for i in range(0, len(stocks_links_list)):
         driver = webdriver.Chrome()
         driver.get(homepage)
         spiders.reject_cookies(driver)
-    counter += 1  
+    counter += 1   """
 
-""" counter = 0
+counter = 0
 articles_links_list = list(articles_links)
 for i in range(0, len(articles_links)):
     if(articles_links_list[i] != "https://finance.yahoo.com/news/home-furniture-retailer-stocks-q2-075938416.html"):
         print("Read article: " + articles_links_list[i] + " number " + str(counter))
         counter += 1
-        article = spiders.read_article(driver, articles_links_list[i])
-        articles.append(article)
-
+        try:
+            article = spiders.read_article(driver, articles_links_list[i])
+            articles.append(article)
+        except Exception as e:
+            print("Exception thrown: ", str(e))
         if (i % 100 == 0):  
             driver = webdriver.Chrome()
             driver.get(homepage)
             spiders.reject_cookies(driver)
 
-"""
+
 
 def load_json_data(filepath):
     if os.path.exists(filepath):  
@@ -153,8 +156,8 @@ def append_to_json(filepath, new_data):
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(current_data, f, indent=4, ensure_ascii=False)  
 
-#append_to_json('database/article.json', [article.to_dict() for article in articles])
-append_to_json('database/stock.json', [stock.to_dict() for stock in stocks])
+append_to_json('database/article.json', [article.to_dict() for article in articles])
+#append_to_json('database/stock.json', [stock.to_dict() for stock in stocks])
 
 driver.close()
 
