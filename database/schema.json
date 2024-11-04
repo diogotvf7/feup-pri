@@ -1,0 +1,65 @@
+{
+	"add-field-type": [
+        {
+            "name":"regular_text",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.PorterStemFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true},
+                    {"class":"solr.FlattenGraphFilterFactory"}
+
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.PorterStemFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true}
+                ]
+            }
+        },
+        {
+            "name": "date_field",
+            "class": "solr.DatePointField"
+        },
+        {
+            "name": "numeric_field",
+            "class": "solr.TrieDoubleField"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "body",
+            "type": "regular_text",
+            "indexed": true
+        },
+        {
+            "name": "title",
+            "type": "regular_text",
+            "indexed": true
+        },
+        {
+            "name":"created_at",
+            "type": "date_field",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name":"stocks_changes_value",
+            "type": "numeric_field",
+            "indexed": true,
+            "stored":true,
+            "multiValued": true
+        }
+    ]
+}
