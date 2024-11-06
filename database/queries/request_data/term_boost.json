@@ -1,7 +1,0 @@
-{
-    "query": "title:stock^2.0 AND body:market^1.0",
-    "params": {
-        "indent": "true",
-        "q.op": "OR"
-    }
-}

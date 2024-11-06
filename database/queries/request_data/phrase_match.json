@@ -1,7 +1,0 @@
-{
-    "query": "title:\"stock market\"~2",
-    "params": {
-        "indent": "true",
-        "q.op": "OR"
-    }
-}

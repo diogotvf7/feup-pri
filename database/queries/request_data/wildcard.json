@@ -1,7 +1,0 @@
-{
-    "query": "title:stoc* AND body:marke~1",
-    "params": {
-        "indent": "true",
-        "q.op": "OR"
-    }
-}
