@@ -1,9 +1,11 @@
 {
   "responseHeader": {
     "status": 0,
-    "QTime": 10,
+    "QTime": 3,
     "params": {
-      "json": "{\"query\": \"title:\\\"stock market\\\"^2.0 body:\\\"stock market\\\"^1.5\", \"params\": {\"indent\": \"true\", \"q.op\": \"OR\"}}"
+      "q": "title:\"stock market\"^2.0 body:\"stock market\"^1.5",
+      "indent": "true",
+      "q.op": "OR"
     }
   },
   "response": {

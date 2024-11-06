@@ -9,16 +9,7 @@ import webbrowser
 import threading
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
-QUERIES_PATHS = [
-    BASE_DIR / "request_data/field_boost.json",
-    BASE_DIR / "request_data/independent_boost.json",
-    BASE_DIR / "request_data/phrase_match.json",
-    BASE_DIR / "request_data/proximity.json",
-    BASE_DIR / "request_data/term_boost.json",
-    BASE_DIR / "request_data/wildcard.json",
-]
-OUTPUT_FILE = BASE_DIR / "response.json"
+OUTPUT_FILE = Path(__file__).resolve().parent / "response.json"
 PORT = 8000
 WEBSOCKET_PORT = 8765
 
@@ -39,34 +30,17 @@ async def notify_clients(websocket, path):
         if last_mod_time is None or current_mod_time > last_mod_time:
             last_mod_time = current_mod_time
 
-            with open(OUTPUT_FILE, 'r') as file:
-                data = json.load(file)
-            try:
-                await websocket.send(json.dumps(data))
-            except websockets.exceptions.ConnectionClosed as e:
-                print(f"Connection closed: {e}")
+            if OUTPUT_FILE.exists() and OUTPUT_FILE.stat().st_size > 0:  # Check if file has data
+                with open(OUTPUT_FILE, 'r') as file:
+                    try:
+                        data = json.load(file)
+                        await websocket.send(json.dumps(data))
+                    except json.decoder.JSONDecodeError:
+                        await websocket.send(json.dumps({"error": "Invalid JSON or empty response."}))
+            else:
+                await websocket.send(json.dumps({"error": "No valid data available."}))
         
         await asyncio.sleep(1)
-
-def query(path):
-    with open(path, 'r') as file:
-        content = file.read()
-        if not content:
-            print(f"Error: {path} is empty")
-            return None
-        json_data = json.loads(content)
-
-    response = requests.post(
-        "http://localhost:8983/solr/stocks/select",
-        headers={"Content-Type": "application/json"},
-        json=json_data
-    )
-    
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(f"Error: {response.status_code}")
-        return None
     
 class JSONHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -120,18 +94,29 @@ def start_server():
         webbrowser.open(f"http://localhost:{PORT}", 0)
         httpd.serve_forever()
 
+from scripts import query1, query2, query3, query4, query5, query6
+
+queries = [
+    query1,
+    query2,
+    query3,
+    query4,
+    query5,
+    query6
+]
+
 def main():
     try:
-        server_thread = threading.Thread(target=start_server)
+        server_thread = threading.Thread(target=start_server)   # Thread to start http server
         server_thread.daemon = True
         server_thread.start()
 
-        websocket_thread = threading.Thread(target=start_websocket_server)
+        websocket_thread = threading.Thread(target=start_websocket_server) # Thread to start websocket server
         websocket_thread.daemon = True
         websocket_thread.start()
 
         while True:
-            clear_screen()
+            # clear_screen()
             i = input("""
                           Which query would you like to run?
                             1. Field boost
@@ -143,15 +128,21 @@ def main():
                             7. Exit
                     """)
             if i >= "1" and i <= "6":
-                response = query(QUERIES_PATHS[int(i) - 1])
-                # print(json.dumps(response.json(), indent=2))
-                OUTPUT_FILE.write_text(json.dumps(response, indent=2))
+                response = queries[int(i) - 1]()
+                if response.status_code == 200:
+                    try:
+                        json_data = response.json()
+                        OUTPUT_FILE.write_text(json.dumps(json_data, indent=2))
+                    except ValueError:
+                        print("Received non-JSON response or empty body.")
+                else:
+                    print(f"Error: {response.status_code}")
             elif i == "7":
                 break
             else:
                 print("Invalid input. Please try again.")
 
-    except OSError as e:
+    except OSError as e: # TODO: Ainde é preciso??
         if e.errno == 98:
             print(f"""
                 Port {PORT} is already in use. Please close any other services using that port.
