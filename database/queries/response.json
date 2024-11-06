@@ -1,0 +1,165 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 10,
+    "params": {
+      "json": "{\"query\": \"title:\\\"stock market\\\"^2.0 body:\\\"stock market\\\"^1.5\", \"params\": {\"indent\": \"true\", \"q.op\": \"OR\"}}"
+    }
+  },
+  "response": {
+    "numFound": 77,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+      {
+        "title": "The relentless stock market rally could pull off another shocker",
+        "authors": [
+          "Jason Ma"
+        ],
+        "created_at": "2024-10-19T00:00:00Z",
+        "body": "The stock market stunned Wall Street last year with a massive gain, and it could top that this year with an even bigger surge. Helped by a U.S. economy that remained strong despite widespread predictions for a recession as well as a dovish shift in tone from the Federal Reserve last fall, the S&P 500 jumped 24% in 2023. Only a handful of Wall Street analysts expected a rally of that magnitude, leading to skepticism that another huge leap was possible in 2024. In fact, JPMorgan predicted the S&P 500 would drop sharply this year. Meanwhile, Morgan Stanley expected an average year with returns in the single digits, not a repeat of double-digit gains. Fast forward to today, and the S&P 500 is already up 23% so far in 2024, nearly matching last year's advance. That's despite the Fed beginning its rate-cutting cycle later than hoped and with fewer cuts anticipated for the year. Instead of being fueled by Fed rate cuts, the stock market rally has had other catalysts: the economy has continued to defy expectations with its robustness, corporate earnings have come in strong, and the AI boom still has legs. In recent weeks, Wall Street has been warming up to the idea of another big gain. Earlier this month, Goldman Sachs chief U.S. equity strategist David Kostin said the S&P 500 would hit 6,000 by the end of the year and 6,300 a year from now. That was up from Goldman\u2019s earlier predictions that the S&P 500 would reach 5,600 by year\u2019s end and 6,000 over the next 12 months. If the broad stock market index hits that target, it would represent an increase of 26% for the year. Jay Hatfield, CEO at Infrastructure Capital Advisors, has been saying for months that the S&P 500 would end the year at 6,000. That assumes the U.S. election produces a divided government, which is more likely to lead to stable regulatory policy and lower government spending, he reiterated in a recent note. And on Friday, Sandra Cho, founder and president of Pointwealth Capital Management, told CNBC that she sees the S&P 500 finishing the year at about 6,000. \"We're in the soft-landing camp,\" she said. \"We definitely feel like the Fed has done a pretty good job. There's been a couple of hiccups, but [it] has done a pretty good job as far as factoring in inflation and managing what's going on, especially with the geopolitical events happening.\" Of course, not everyone is convinced that the good times will keep on rolling. Nassim Nicholas Taleb, who wrote the book The Black Swan about unpredictable events, said the current environment is similar to what existed during previous collapses, pointing to complacency in the market and the earlier era of low rates that taught people to avoid conservative investments.     ",
+        "sentiment_compound": [
+          0.9409
+        ],
+        "id": "e585dd57-3db0-4ad7-a6f0-35d814fed1f5",
+        "_version_": 1814920585281536000,
+        "_root_": "e585dd57-3db0-4ad7-a6f0-35d814fed1f5"
+      },
+      {
+        "title": "Are Stock Markets Open on Monday for Columbus Day?",
+        "authors": [
+          "Aaron McDade"
+        ],
+        "created_at": "2024-10-11T00:00:00Z",
+        "body": " Next Monday, Oct. 14, is Columbus Day, a federal holiday. Stock and bond markets typically follow the federal holiday schedule, but the New York Stock Exchange and Nasdaq will operate normal hours Monday. However, bond markets will be closed, along with many banks and government operations like the post office.  This year, Oct. 14 is the second Monday of October, the date that Columbus Day is celebrated in the U.S., meaning you may be wondering if stock markets will be open for trading. Considering the New York Stock Exchange (NYSE) and Nasdaq largely follow the calendar of federal holidays for closures, it may come as a surprise that both will be open and operating normally on Monday. The two remaining holidays on the exchanges' respective calendars for 2024 are Thanksgiving and Christmas, with additional shortened hours on the day after Thanksgiving and on Christmas Eve. However, federal operations like the Federal Reserve and post offices will be closed, as will commercial banks that follow the federal holiday schedule. Bond markets will also be closed. Read the original article on Investopedia. ",
+        "sentiment_compound": [
+          0.9871
+        ],
+        "id": "c580172b-73ee-4833-b263-34053c1e7c42",
+        "_version_": 1814920584965914624,
+        "_root_": "c580172b-73ee-4833-b263-34053c1e7c42"
+      },
+      {
+        "title": "Stock market traders to make a fortune on chippies\u2019 used fat",
+        "authors": [
+          "Matt Oliver"
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": "The fat and oils thrown away by Britain\u2019s legion of fish-and-chip shops have long been viewed as useless waste. But now the nation\u2019s chippies may want to reconsider: they could be sitting on supplies of liquid gold. For the first time, a major stock exchange is set to launch a market for supplies of waste cooking oils as production of eco-fuels becomes big business. Bursa Malaysia, Malaysia\u2019s biggest stock market and the main hub for trading palm oil globally, is considering the launch of futures contracts for used cooking oil, according to Bloomberg. Cooking oil and similar waste are common by-products of restaurants and food manufacturers that use deep fat fryers. A typical tabletop fryer holds about 10 litres of oil and this needs to be changed at least once or twice a week, according to Bio UK Fuels, a Sheffield-based company that recycles the waste. This used oil can be used as a feedstock to produce so-called biofuels, which produce fewer carbon emissions compared to traditional petrol and diesel products. These are increasingly being used to fuel vehicles, provide heating and generate electricity, with the European Union adopting rules last year to mandate uptake. Waste oil biofuels consumption rose globally by almost 40pc between 2021 and 2023, according to an estimate from the Transport & Environment lobby group. Bursa Malaysia plans to offer US dollar-denominated contracts for lots of 25 metric tons of used cooking oil, Bloomberg reported on Thursday. A spokesperson for Bursa Malaysia said changes may still be made, with any contract launch subject to regulatory approval. Broaden your horizons with award-winning British journalism. Try The Telegraph free for 3 months with unlimited access to our award-winning website, exclusive app, money-saving offers and more. ",
+        "sentiment_compound": [
+          -0.7684
+        ],
+        "id": "855e90f6-7aa8-4aa3-a8b6-6859762c544b",
+        "_version_": 1814920584876785664,
+        "_root_": "855e90f6-7aa8-4aa3-a8b6-6859762c544b"
+      },
+      {
+        "title": "Why Is Cancer-Focused Immatics Stock Trading Lower On Thursday?",
+        "authors": [
+          "Vandana Singh"
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": "On Thursday, Immatics N.V. (NASDAQ:IMTX) stock is trading lower after the company commenced an underwritten public offering of $150 million. The company also announced updated Phase 1b data on ACTengine IMA203 TCR-T targeting PRAME in melanoma patients and provided an update on SUPRAME, the upcoming Phase 3 trial to evaluate IMA203 in metastatic melanoma patients. As of August 23, 2024, 28 heavily pretreated patients with metastatic melanoma were treated with IMA203 at the recommended Phase 2 dose (RP2D, 1 to 10 billion total TCR-T cells) during the Phase 1b dose expansion part of the clinical trial. IMA203 monotherapy has maintained a favorable tolerability profile with no treatment-related Grade 5 adverse events in the safety population, even at doses up to ~10\u00d710 power 9 TCR-T cells. The data presented demonstrate a significant positive shift in median progression-free survival (PFS) and median overall survival (OS) between melanoma patients treated during Phase 1a and patients treated in Phase 1b. In addition, approximately half of all patients in the Phase 1b trial have a deep response (>50% tumor reduction). This subgroup of patients was observed to have a median PFS of more than one year, while patients with <50% tumor reduction (including patients with tumor size increase) were still observed with a more than 2 times longer median PFS compared to patients treated in dose escalation with suboptimal doses. Translational data from patients across Phase 1a and Phase 1b indicate that IMA203 T cells rapidly engrafted in all patients after a single dose and show a persistence of more than two years. The Phase 3 trial will evaluate IMA203 targeting PRAME in 360 HLA-A*02:01-positive patients with second-line or later unresectable or metastatic melanoma. The Phase 3 trial is on track to commence in December 2024 and patient enrollment is forecasted to be completed in 2026. A pre-specified interim analysis is planned for early 2026. The company aims to submit an FDA marketing application in early 2027 for full approval. Price Action: IMTX stock is down 11.1% at $9.841 at last check Thursday. Photo via Shutterstock Read Next: Cloudflare Taps ServiceNow Executive To Drive $5B Growth Ambition \u2013 What\u2019s Going On? Up Next: Transform your trading with Benzinga Edge's one-of-a-kind market trade ideas and tools. Click now to access unique insights that can set you ahead in today's competitive market. Get the latest stock analysis from Benzinga? This article Why Is Cancer-Focused Immatics Stock Trading Lower On Thursday? originally appeared on Benzinga.com \u00a9 2024 Benzinga.com. Benzinga does not provide investment advice. All rights reserved. ",
+        "sentiment_compound": [
+          0.5204
+        ],
+        "id": "0775472c-aedb-4991-b060-ac2ae980aaba",
+        "_version_": 1814920585177726976,
+        "_root_": "0775472c-aedb-4991-b060-ac2ae980aaba"
+      },
+      {
+        "title": "Stocks trading lower: Boeing, Kenvue, ASML, and more are big movers",
+        "authors": [
+          "Silin Chen"
+        ],
+        "created_at": "2024-10-21T00:00:00Z",
+        "body": "The stock market is trading lower midday Monday, down from last week's new high. The S&P 500 slipped 0.36%, while the tech-heavy Nasdaq Composite traded slightly below flat, down 0.06%. The Dow Jones Industrial Average lost 0.85%. The Russell 2000 Index fell 1.44%. Five S&P 500 stocks making big midday moves are: Kenvue KVUE +5.1% NVIDIA  (NVDA)  +3.2% Boeing  (BA)  +2.7% Super Micro Computer  (SMCI)  +2.6% Paycom Software  (PAYC)  +2.2% The worst-performing five S&P 500 stocks with the largest midday drop are: Monolithic Power Systems  (MPWR)  -5.1% Builders FirstSource  (BLDR)  -4.9% Cigna Group  (CI)  -4.4% Target  (TGT)  -4.1% Lennar  (LEN)  -3.8% Stocks also worth noting include: Apple  (AAPL)  +0.6% Tesla  (TSLA)  -1.6% Amazon  (AMZN)  -0.2% ASML  (ASML)  -1.6% Netflix  (NFLX)  +0.7% Bloomberg/Getty Images Kenvue jumped more than 5% after it was revealed activist investor Starboard Value has acquired a significant stake, the Wall Street Journal reported. Starboard is pushing for improvements in Kenvue's share price, although specific details of their stake and plans have not been disclosed. Starboard's CEO, Jeff Smith, is expected to reveal more at an upcoming investor summit. Kenvue is a consumer products company that spun off from Johnson & Johnson in 2023. The split from Johnson & Johnson  (JNJ)  was part of J&J's strategy to streamline its operations and concentrate on its pharmaceutical and medical device divisions. Boeing added 3% after the company and its machinists\u2019 union reviewed a new contract proposal that could end a month-long strike. The updated offer includes a 35% wage increase over four years, a $7,000 signing bonus, guaranteed payouts in an annual bonus program, and higher 401(k) contributions. The strike began on Sept. 13 after machinists rejected a previous deal offering a 25% wage increase. Boeing later made an improved offer with a 30% wage increase, which was also declined. Boeing announced earlier this month that it would reduce its global workforce by 17,000 jobs, equivalent to 10% of its total staff. The company also expects to report a loss of $9.97 a share for the third quarter. ASML stock slipped 1.6% after Bernstein lowered its price target to $815 from $1,052 while keeping an outperform rating, thefly.com reported.         ",
+        "stocks_changes_name": [
+          "BA",
+          "JNJ"
+        ],
+        "stocks_changes_value": [
+          3.54,
+          0.17
+        ],
+        "sentiment_compound": [
+          0.9477
+        ],
+        "id": "6c187718-7353-4c14-8d19-720b92491a96",
+        "_version_": 1814920585341304832,
+        "_root_": "6c187718-7353-4c14-8d19-720b92491a96"
+      },
+      {
+        "title": "Why the stock market will drop 7% by mid-November, according to a technical analyst",
+        "authors": [
+          "Matthew Fox"
+        ],
+        "created_at": "2024-10-19T00:00:00Z",
+        "body": "The stock market could face a 7% correction by mid-November, says Fundstrat's Mark Newton. Investor complacency and weak seasonals could trigger decline, according to Newton. He views any potential pullback as a \"buy the dip\" opportunity. The stock market looks poised for a 7% correction by mid-November, according to technical analyst Mark Newton of Fundstrat. Newton told clients in a note on Thursday that he is expecting the S&P 500 to see weakness heading into November as investor sentiment hits complacent levels just ahead of the general election on November 5. \"While intermediate-term bullish these remains very much intact, it's doubtful that US Equities continue to push up into and post-election without any consolidation,\" Newton said. Newton said the potential correction he expects in the stock market is likely to be a \"short-term correction only\" and \"not the start of a larger decline,\" playing into Fundstrat's Tom Lee's consistent message that investors should view any decline in the stock market as a \"buy the dip\" opportunity. Newton is monitoring the 5,900 level on the S&P 500 as potential resistance for the index. The S&P 500 traded at around 5,850 on Friday. \"The issues with near-term complacency (as judged by low Equity put/call levels), waning breadth, poor seasonal trends and cyclical projections for November as well as SPX's largest sector, Technology, not performing well of late, are all reasons to be alert for possible trend change in the weeks to come,\" Newton explained. One \"key reason\" Newton is turning bearish in the short-term is that the current rally in stocks that started in early August is 88 days long, which is exactly how long the April 19 to July 16 rally lasted before a sell-off materialized. From a time perspective, that's \"why this rally might 'run out of steam,\" Newton said. Other areas of technical weakness that Newton is monitoring includes negative divergences in momentum as measured by the RSI and the moving average convergence divergence (MACD) indicators, a lack of bearish investors as measured by the AAII investor sentiment data, and seasonal cycles that show a peak in the stock market in mid-to-late October followed by a sell-off through November. \"This market has seemingly 'dodged a bullet' thus far during one of the historically worst periods during most election years. However, investors should not take this to mean that the coast is clear for an interrupted rally higher all year,\" Newton said. Read the original article on Business Insider ",
+        "sentiment_compound": [
+          -0.8756
+        ],
+        "id": "0033abd0-bf15-4b2e-a417-fc1c1bb6cc45",
+        "_version_": 1814920585360179200,
+        "_root_": "0033abd0-bf15-4b2e-a417-fc1c1bb6cc45"
+      },
+      {
+        "title": "Stock market today: Indexes decline after inflation comes in hotter than expected",
+        "authors": [
+          "Kelly Cloonan"
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": "Indexes dipped Thursday as investors took in hotter-than-expected inflation data. Jobless claims, meanwhile, climbed 33,000 to 258,000, its highest in over a year. Traders see the latest data solidifying odds of a 25 basis point rate cut next month. US stocks edged lower on Thursday as investors took in slightly hotter-than-expected inflation data after last week's blockbuster jobs report. The consumer price index showed prices increased 2.4% year-over-year in September, which came in just above consensus forecasts of a 2.3% rise. The core CPI reading, which excludes food and energy costs, came in at 3.3% year-over-year, slightly above forecasts of 3.2% and 0.3% higher than the August reading. Analysts are now shifting their expectations for further easing from the Federal Reserve as inflation cools slightly slower than expected, and as last week's blockbuster jobs report showed a hot economy with 254,000 jobs added last month. The jobs report dashed hopes of another jumbo 50-basis point cut, but the slight upside surprise in CPI likely isn't enough to prompt a complete pause on Fed easing. \"There is only one more set of inflation reports between now and then, and even a firm upside surprise could be discounted as normal monthly volatility on the path back toward the 2% target,\" JPMorgan analysts said in a Friday note after the jobs report. Investors now see a 25-basis point rate cut at the central bank's meeting next month more likely compared to leaving rates unchanged, according to the CME FedWatch Tool. Weekly jobless claims, meanwhile, climbed 33,000 to 258,000, according to Labor Department data released Thursday. That surpassed forecasts of 230,000 and marks the data point's highest level in over a year. Here's where US indexes stood shortly after the 9:30 a.m. opening bell on Thursday: S&P 500: 5,774.06, down 0.32% Dow Jones Industrial Average: 42,429.01, down 0.2% (-82.99 points) Nasdaq composite: 18,218.14, down 0.41% Here's what else was going on Thursday: FEMA was strapped for cash even before Hurricanes Helene and Milton blew through the South. JPMorgan's top strategist, one of Wall Street's biggest bears, is turning upbeat on the stock market for the first time in two years. Billionaire investor Bill Gross recommends defensive and high-yield stocks as the market's record-breaking run is set to slow. In commodities, bonds, and crypto: Oil futures rose. West Texas Intermediate crude rose 1.3% to $74.23 a barrel. Brent crude, the international benchmark, climbed 1.34% to $77.62 a barrel. Gold rose 0.36% to $2,635.6 an ounce. The 10-year Treasury yield was about flat at 4.08%. Bitcoin inched lower to $63,126.50. Read the original article on Business Insider ",
+        "sentiment_compound": [
+          -0.0129
+        ],
+        "id": "08416895-63f2-47ee-b989-30c3c34eb80a",
+        "_version_": 1814920585184018432,
+        "_root_": "08416895-63f2-47ee-b989-30c3c34eb80a"
+      },
+      {
+        "title": "Stock market outlook for the next 12 months: Here\u2019s what top analysts are predicting into 2025",
+        "authors": [
+          "James Royal",
+          "Ph.D."
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": "The stock market has been on a tear in 2024, with the S&P 500 rising by nearly 21 percent over the first three quarters of the year. But the situation may not be so brisk over the coming 12 months, say analysts in Bankrate\u2019s Third-Quarter Market Mavens Survey. These pros expect the market to rise just 4.1 percent over the coming four quarters, below its long-term annual average of 10 percent. The survey\u2019s respondents see the S&P 500 climbing from 5,738 at the end of the survey period to 5,975 by the end of the third quarter of 2025. It\u2019s the 16th straight survey where the analysts have projected a gain in the year ahead. The analysts also preferred U.S. stocks over international ones, and they think value stocks will outperform growth stocks over a similar time frame. \u201cReflecting multiple sources of uncertainty, there are some reasons to be cautious about the outlook,\u201d says Mark Hamrick, Bankrate\u2019s senior economic analyst. \u201cEven so, the resilience of the U.S. economy and the stock market\u2019s ability to power through multiple threats taken together have been nothing short of remarkable.\u201d Here are the highlights from Bankrate\u2019s quarterly Market Mavens Survey. This article is one in a series discussing the results of Bankrate\u2019s Third-Quarter 2024 Market Mavens Survey: Survey: Market strategists see 10-year Treasury yield at 3.5% a year from now Best moves for long-term investors with stocks near all-time highs, according to market experts Stock market outlook for the next 12 months: Here\u2019s what top analysts are predicting into 2025 The S&P 500 has had a really strong run since the start of 2023, and while it\u2019s definitely had some hiccups in 2024, this year has been notably strong, too. But the market pros surveyed by Bankrate expected more muted returns over the next 12 months. The average estimate for the S&P 500 is 5,975 for the quarter ending Sept. 30, 2025 \u2014 up 4.1 percent from 5,738 at the end of the recent survey period on Sept. 27, 2024. In the second-quarter survey, analysts estimated a similar 4 percent gain in the year ahead. \u201cThe major averages have fared remarkably well even when the Federal Reserve was raising interest rates to the highest levels in years,\u201d says Hamrick. \u201cNow that the central bank has begun an easing cycle, the notion \u2018don\u2019t fight the Fed\u2019 should provide some reassurance. At the same time, the Fed\u2019s mandate has nothing to do with preserving stock market gains or momentum.\u201d \u201cIt looks like the Fed can avoid recession, but it\u2019s much too early to have great conviction,\u201d says Michael K. Farr, president and CEO, Farr, Miller & Washington.                                       ",
+        "sentiment_compound": [
+          0.9954
+        ],
+        "id": "18e6ba2b-d22b-4aaf-b923-181b4b84b5c9",
+        "_version_": 1814920585175629824,
+        "_root_": "18e6ba2b-d22b-4aaf-b923-181b4b84b5c9"
+      },
+      {
+        "title": "Stock market today: US stocks pull back from record levels as traders ready for big week of earnings",
+        "authors": [
+          "Matthew Fox"
+        ],
+        "created_at": "2024-10-22T00:00:00Z",
+        "body": "US stocks were mostly lower on Monday, pulling back from last week's record highs. Investors are turning their attention to third-quarter earnings season, with 21% of S&P 500 companies set to report this week. Bank of America said that company executives are striking an optimistic tone on earnings calls. US stocks traded mostly lower on Monday, retreating from last week's record highs. While the Nasdaq 100 rose slightly, the Dow Jones Industrial Average declined by nearly 350 points. The decline on Monday comes as third-quarter earnings season nears its peak, with more than 100 S&P 500 companies set to report results this week, including Coca-Cola, Tesla, Boeing, and UPS. So far, investors should be feeling good about third-quarter results. Of the 21% of S&P 500 companies that have reported so far, about 80% beat profit estimates by 5%, while 60% beat revenue estimates, according to data from Bank of America. Bank of America strategist Savita Subramanian said that company executives are striking an optimistic tone on earnings calls. \"Processing the natural language of corporate management yields a record level of optimism, and a pick up after four quarters of deceleration,\" Subramanian said in a note on Monday. She added: \"Mentions of weak demand fell, tracking the lowest levels in two years where less / more mentions have been correlated to a rising / falling ISM Manufacturing PMI.\" Nvidia jumped to record levels during the session to help lift the Nasdaq slightly higher. The stock rose more than 4% to close at $143.71. Analysts have been feeling bullish on the stock's prospects for further gains amid big demand for its new Blackwell chips. Bank of America was the latest firm to up its price target for the stock, calling out a \"generational opportunity\" for the company in a note at the end of last week. It's a quiet week for economic data, though Fedspeak is set to ramp up with speeches from six central bank officials scheduled throughout the week. Here's where US indexes stood at the 4:00 p.m. closing bell on Monday: S&P 500: 5,853.98, down 0.18% Dow Jones Industrial Average: 42,931.60, down 0.80% (-344.31 points) Nasdaq composite: 18,540.01, down 0.27% Here's what else happened today: Disney said it will appoint Bob Iger's successor as CEO by early 2026. Goldman Sachs said investors should prepare for a decade of muted returns in the stock market. An under-the-radar bull case for bitcoin has nothing to do with the election or interest rates. Here's where investors worried about a stock market bubble should invest their money.       ",
+        "sentiment_compound": [
+          0.9595
+        ],
+        "id": "c0353746-6b55-4e11-a018-84e6f6d517fc",
+        "_version_": 1814920585227010048,
+        "_root_": "c0353746-6b55-4e11-a018-84e6f6d517fc"
+      },
+      {
+        "title": "Stock market today: Indexes edge lower as investors take a breather after record-setting week",
+        "authors": [
+          "Matthew Fox"
+        ],
+        "created_at": "2024-10-21T00:00:00Z",
+        "body": "US stocks dipped as investors await third-quarter earnings from major S&P 500 companies. The slight decline on Monday follows a six-week win streak and record highs for S&P 500 and Dow Jones. Of the 14% of S&P 500 firms reporting Q3 results so far, 81% have exceeded profit estimates. US stocks took a breather on Monday, with all three major indexes moving slightly lower as investors prepare for another wave of third-quarter earnings. The slight decline comes after a six-week win streak in the major indexes and record highs for the S&P 500 and Dow Jones Industrial Average. More than 20% of S&P 500 companies are set to report results this week, including Coca-Cola, Tesla, and UPS. So far, investors should be feeling good about third-quarter earnings results. Of the 14% of S&P 500 companies that have reported results so far, 81% beat profit estimates by a median of 6%, while real revenue growth accelerated to 2%, according to data from Fundstrat. \"This remains a solid earnings season so far,\" Fundstrat's Tom Lee said in a note on Monday, adding that the positive results are \"supportive\" of market fundamentals. It's a quiet week for economic data, though Fedspeak is set to ramp up with speeches from six members of the Federal Reserve. Here's where US indexes stood shortly after the 9:30 a.m. opening bell on Monday: S&P 500: 5,858.63, down 0.10% Dow Jones Industrial Average: 43,224.76, down 0.12% (-51.15 points) Nasdaq composite: 18,477.36, down 0.07% Here's what else is going on: Disney said it will appoint Bob Iger's successor as CEO by early 2026. The under-the-radar bull case for bitcoin in the long-term is related to death and poor estate planning. Here's where investors worried about a stock market bubble should invest their money. In commodities, bonds, and crypto: West Texas Intermediate crude oil was up 1.82% to $69.94 a barrel. Brent crude, the international benchmark, was higher by 1.56% to $74.20 a barrel. Gold was higher by 0.82% to $2,752.90 an ounce. The 10-year Treasury yield jumped 6 basis points to 4.140%. Bitcoin was lower by 1.82% to $67,762. Read the original article on Business Insider ",
+        "sentiment_compound": [
+          0.7783
+        ],
+        "id": "b4716b58-f06d-4b62-a7da-6163e39468fb",
+        "_version_": 1814920585348644864,
+        "_root_": "b4716b58-f06d-4b62-a7da-6163e39468fb"
+      }
+    ]
+  }
+}
