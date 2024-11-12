@@ -1,0 +1,174 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 1,
+    "params": {
+      "q": "title:stoc* AND body:marke~1",
+      "indent": "true",
+      "q.op": "OR"
+    }
+  },
+  "response": {
+    "numFound": 165,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+      {
+        "title": "Stock Market Today: Stocks end lower ahead of busy earnings week",
+        "authors": [
+          "Martin Baccardax"
+        ],
+        "created_at": "2024-10-21T00:00:00Z",
+        "body": "Updated at 4:35 PM EDT Stocks ended mixed Monday, snapping a three-day winning streak, as Wall Street kicked off a big week for earnings reports. The Dow Jones Industrial Average lost 344.31 points, or 0.80%, to finish the session at 42,931.60, while the S&P 500 slipped 0.18% to close 5,853.98, and the tech-heavy Nasdaq gained 0.27% to end the day at 18,540.01. Adam Turnquist, chief technical strategist, LPL Financial, said that last week, the S&P 500 rose 0.9% and closed at a record high. \u201cThis was the broader market\u2019s sixth straight weekly gain, marking its longest winning streak of the year,\u201d he said. \u201cWhile the market is entering a potentially volatile period ahead of the election and facing overhead resistance near the upper end of its rising price channel, history suggests investors should buy dips as momentum tends to continue after a six-week winning streak,\" Turnquist said. Updated at 12:25 PM EDT Tesla shares extended their recent drawdown in mid-day Monday trading ahead of the carmaker's third quarter earnings later in the week. Tesla, which is down 12.6% over the past month and 8.5% since its disappointing robotaxi event in Los Angeles on October 10, is expected to post a bottom line of 48 cents per share on revenues of $25.37 billion. Tesla shares were last marked 0.97% lower, against a 0.17% pullback for the Nasdaq, and changing hands at $218.68 each. Updated at 11:20 AM EDT The U.S. dollar index, which tracks the greenback against a basket of six global currencies, hit a fresh two-month high of 103.824 as Treasury yields continue to climb amid reflation risks tied to the world's biggest economy. Gold prices, as well, are holding recent gains, after hitting an all-time peak of $2,733 per ounce in overnight trading. Updated at 9:34 AM EDT The S&P 500 was marked 7 points, or 0.13% lower in the opening minutes of trading, with the Nasdaq down 47 points, or 0.26%. The Dow, meanwhile, slipped 58 points while the mid-cap Russell 2000 fell 1 point, or 0.04%. Benchmark 10-year Treasury note yields were last marked at 4.138%, up 2 basis points from overnight levels, while 2-year notes were pegged at 3.989%. Updated at 8:41 AM EDT Walt Disney  (DIS)  shares were active in premarket trading after the media and entertainment giant named James Gorman as group chairman, replacing Nike  (NKE)  executive Mark Parker early next year. The group also said it would plan to announce a new CEO, replacing interim boss Bob Iger, in 2026.                      ",
+        "sentiment_compound": [
+          0.9766
+        ],
+        "id": "bee04a23-1471-46bb-9784-59fe48fa109b",
+        "_version_": 1814920585349693440,
+        "_root_": "bee04a23-1471-46bb-9784-59fe48fa109b"
+      },
+      {
+        "title": "StockX Hires Nick Karrat as Its Next Chief Marketing Officer",
+        "authors": [
+          "Peter Verry"
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": " More from Footwear News Sneakers From StockX Will Soon be Available Via Walmart Nike and Jordan's Market Share on StockX Has Declined, but Asics and Adidas Are Rising EXCLUSIVE: Represent and StockX Team Up on Reptor 2 Sneaker Inspired by Wall Street  StockX has hired Nick Karrat as its next chief marketing officer. In a statement, StockX stated Karrat will be tasked with overseeing brand marketing, integrated marketing, performance marketing, creative and product marketing across the globe, and will drive its overarching consumer-facing strategy. Karrat will start on Oct. 21 and report directly to StockX co-founder, president and chief operating officer Greg Schwartz. \u201cNick\u2019s experience leading high-performing marketing teams in the e-commerce landscape makes him a valuable asset to our business,\u201d said Schwartz. \u201cHis vision aligns perfectly with our goals, and his leadership will be instrumental in navigating the next phase of our growth. Together, we look forward to creating meaningful brand connections with the millions of customers StockX serves around the world.\u201d Most recently, Karrat was the chief marketing officer at lifestyle clothing brand Tommy John. His marketing career also includes stops at Boll & Branch and Plated. \u201cI\u2019ve been buying Jordans since the \u201980s, so having the opportunity to combine my work and passion makes this a dream role. As a long-term StockX customer, I admire how the platform rewrote the rules of commerce, and changed how people buy and sell online,\u201d Karrat said in a statement. \u201cI\u2019m excited to join the talented team to help further cement StockX\u2019s position in current culture and focus on its mission to empower everyone to trade what they love.\u201d Peter Verry is the Senior News and Features Editor for Athletic and Outdoor at Footwear News. He oversees coverage of the two fast-paced and ultracompetitive markets, which includes conducting in-depth interviews with industry leaders and writing stories on sneakers and outdoor shoes. He is a lifelong sneaker addict (and shares his newest purchases via @peterverry on Instagram) and spends most of his free time on a trail. He holds an M.A. in journalism from Hofstra University and can be reached at peter.verry@footwearnews.com.   Best of Footwear News 11 Fast Facts About Ross Dress For Less & Why Prices Are So Low A Look Inside Kith Seoul, the First Kith Flagship in South Korea: Photos How Fifth Avenue Has Evolved Through the Years Sign up for FN's Newsletter. For the latest news, follow us on Facebook, Twitter, and Instagram. ",
+        "sentiment_compound": [
+          0.9976
+        ],
+        "id": "7b2ac862-4e2f-48e7-86ee-0d3482f802b6",
+        "_version_": 1814920584890417152,
+        "_root_": "7b2ac862-4e2f-48e7-86ee-0d3482f802b6"
+      },
+      {
+        "title": "Stock Market Today: Stocks lower as bond market extends slump",
+        "authors": [
+          "Martin Baccardax"
+        ],
+        "created_at": "2024-10-22T00:00:00Z",
+        "body": "Check back for updates throughout the trading day U.S. equity futures slumped lower in early Tuesday trading, while Treasury yields continued to weaken following yesterday's bond market selloff, as investors pared bets on Federal Reserve rate hikes while bracing for a busy slate of corporate earnings on Wall Street. Stocks ended mixed on Monday, with a modest decline for the S&P 500, a larger pullback for the Dow Jones Industrial Average and a gain for the tech-focused Nasdaq as bond markets returned to their recent volatility. Benchmark 10-year Treasury notes yields, which move in the opposite direction of prices, rose 11 basis points on the session, while adding another in overnight trading, and were last marked at a three month high of 4.208% heading into the New York session. Merrill Lynch's MOVE index, which tracks fixed income volatility and is known as the 'VIX for bonds', is trading at the highest levels of the year and is up nearly 48.6% from its early July lows. Messaging from Federal Reserve officials that suggested a slower pace of rate cuts, election uncertainty and the prospect of higher deficits regardless of who wins the White House and renewed inflation concerns tied to the outperforming economy have all combined to drive yields higher. The moves are sapping risk sentiment in markets around the world, and driving the dollar index to multi-month highs against a basket of its global peers. That's being played out in this mornings premarket session, where futures contracts tied to the S&P 500 suggest a 28 point pullback, with the Dow called 200 points lower and the Nasdaq poised of a 130 point decline. Related: S&P 500 blows past bond market warnings A heavy slate of earnings is expected throughout the session, with 3M  (MMM) , GE Aerospace  (GE) , Lockheed Martin  (LMT)  and Verizon  (VZ)  reporting before the opening bell and Texas Instruments  (TXN)  updating after the close. In Europe, the Stoxx 600 was marked 0.38% lower in early Frankfurt trading, although software group SAP hit a fresh all-time high following stronger-than-expected third quarter earnings. Britain's FTSE 100 fell 0.64% in London. More Wall Street Analysts: Analysts update Meta stock price target with Q3 earnings in focus Analysts update outlook for Nvidia's Blackwell chips amid AI boom Analyst reboots Reddit stock price target ahead of earnings Overnight in Asia, Japan's Nikkei 225 fell 1.39% as investors took risk off the table ahead of this weekend's national elections and the yen weakened to 151, a three month low, against the U.S. dollar.   ",
+        "sentiment_compound": [
+          -0.6908
+        ],
+        "id": "9295b435-4535-4b5b-b4f6-ac9b4ec53a0e",
+        "_version_": 1814920585285730304,
+        "_root_": "9295b435-4535-4b5b-b4f6-ac9b4ec53a0e"
+      },
+      {
+        "title": "Why the stock market will drop 7% by mid-November, according to a technical analyst",
+        "authors": [
+          "Matthew Fox"
+        ],
+        "created_at": "2024-10-19T00:00:00Z",
+        "body": "The stock market could face a 7% correction by mid-November, says Fundstrat's Mark Newton. Investor complacency and weak seasonals could trigger decline, according to Newton. He views any potential pullback as a \"buy the dip\" opportunity. The stock market looks poised for a 7% correction by mid-November, according to technical analyst Mark Newton of Fundstrat. Newton told clients in a note on Thursday that he is expecting the S&P 500 to see weakness heading into November as investor sentiment hits complacent levels just ahead of the general election on November 5. \"While intermediate-term bullish these remains very much intact, it's doubtful that US Equities continue to push up into and post-election without any consolidation,\" Newton said. Newton said the potential correction he expects in the stock market is likely to be a \"short-term correction only\" and \"not the start of a larger decline,\" playing into Fundstrat's Tom Lee's consistent message that investors should view any decline in the stock market as a \"buy the dip\" opportunity. Newton is monitoring the 5,900 level on the S&P 500 as potential resistance for the index. The S&P 500 traded at around 5,850 on Friday. \"The issues with near-term complacency (as judged by low Equity put/call levels), waning breadth, poor seasonal trends and cyclical projections for November as well as SPX's largest sector, Technology, not performing well of late, are all reasons to be alert for possible trend change in the weeks to come,\" Newton explained. One \"key reason\" Newton is turning bearish in the short-term is that the current rally in stocks that started in early August is 88 days long, which is exactly how long the April 19 to July 16 rally lasted before a sell-off materialized. From a time perspective, that's \"why this rally might 'run out of steam,\" Newton said. Other areas of technical weakness that Newton is monitoring includes negative divergences in momentum as measured by the RSI and the moving average convergence divergence (MACD) indicators, a lack of bearish investors as measured by the AAII investor sentiment data, and seasonal cycles that show a peak in the stock market in mid-to-late October followed by a sell-off through November. \"This market has seemingly 'dodged a bullet' thus far during one of the historically worst periods during most election years. However, investors should not take this to mean that the coast is clear for an interrupted rally higher all year,\" Newton said. Read the original article on Business Insider ",
+        "sentiment_compound": [
+          -0.8756
+        ],
+        "id": "0033abd0-bf15-4b2e-a417-fc1c1bb6cc45",
+        "_version_": 1814920585360179200,
+        "_root_": "0033abd0-bf15-4b2e-a417-fc1c1bb6cc45"
+      },
+      {
+        "title": "Stock movers: Adobe, PayPal, Delta Air Lines",
+        "authors": [
+          "Silin Chen"
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": "The stock market is trading lower. The S&P 500 is down 0.4%, while the tech-focused Nasdaq Composite slipped 0.25%. The Dow Jones Industrial Average declined 0.42% and the Russell 2000 Index dropped 1%. Five S&P 500 stocks making big moves are: CrowdStrike Holdings  (CRWD)  +5.2% Micron Technology  (MU)  +4% Mosaic  (MOS)  +3.5% Valero Energy  (VLO)  +2.7% Marathon Petroleum  (MPC)  +2.5% The worst-performing five S&P 500 stocks with the largest midday drop are: First Solar  (FSLR)  -9.4% Enphase Energy  (ENPH)  -5.9% Advanced Micro Devices  (AMD)  -4.8% Arthur J. Gallagher  (AJG)  -3.7% Generac Holdings  (GNRC)  -3.6% Stocks also worth noting include: PayPal  (PYPL)  -3% Adobe  (ADBE)  +2% Delta Air Lines  (DAL)  -2% Nvidia  (NVDA)  +0.9% Tesla  (TSLA)  +0.2% Andrew Harnik/Getty Images Delta Air stock lost 2% after the carrier posted fiscal third-quarter earnings. The stock had been trading 3% higher around midday. The company earned $1.50 a share in the quarter, missing the consensus analyst estimate of $1.52. Revenue of $14.59 billion missed the $14.67 billion forecast. Related: Delta earnings reveal true cost of CrowdStrike meltdown The airliner\u2019s fourth-quarter revenue guidance also disappointed investors. Delta expects revenue to rise between 2% and 4% from a year earlier, while LSEG\u2019s estimate is 4.1%. Delta Chief Executive Ed Bastian cautioned that the upcoming election might lead to some fluctuations, but he also noted solid holiday bookings. \u201cWe do anticipate seeing a little choppiness around the election, which we\u2019ve seen in past national elections,\u201d Bastian said in an interview with CNBC. \u201cConsumers will, I think, take a little bit of pause in making investment decisions, whether it's discretionary or other things. I think you\u2019re going to hear other industries talking about that as well.\u201d PayPal lost 3% after Bernstein analyst Harshita Rawat downgraded the stock to market perform from outperform with a price target of $80, up from $75, thefly.com reported. Bernstein indicates its price target doesn\u2019t imply much upside, given PayPal's recent stock performance. Related: Analyst resets PayPal stock price target after earnings \u201cWhile product velocity is improving, we remain worried about competitive pressures on the cash-cow core button, which often is still richly priced versus peers,\u201d Rawat wrote.             ",
+        "stocks_changes_name": [
+          "PYPL",
+          "DAL"
+        ],
+        "stocks_changes_value": [
+          1.94,
+          2.07
+        ],
+        "sentiment_compound": [
+          0.705
+        ],
+        "id": "29f4643b-621b-44ce-92fe-f2e4b956ded5",
+        "_version_": 1814920585169338368,
+        "_root_": "29f4643b-621b-44ce-92fe-f2e4b956ded5"
+      },
+      {
+        "title": "3 2024 election stock picks to watch now",
+        "authors": [
+          "Daniel Kuhn"
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": "At this stage in the political cycle, the one bipartisan issue may be that we've all had enough of campaign ads, whether presidential, state or local. However, the bane of your viewing experience may prove beneficial to your wallet. In this sneak peek from the quarterly TheStreet Pro members' call, portfolio manager Chris Versace revealed the investing play you could be leaving on the table as digital advertising accelerates into the final days of the 2024 presidential election. Catch Versace's comprehensive review of the market and the entire TheStreet Pro portfolio here. Make the most of your money with TheStreet: Reach your money goals faster with a financial workout Critical financial moves to make before the end of 2024 You're behind on finances at mid-year \u2014 how to get back on track Here's how to fight inflation while maximizing retirement saving CHRIS VERSACE: I would say that the market condition is continuing to be overbought and stretched. I think that the election-- I mean, it's going to come down to the wire. I think if we take a look at some of the latest polling really in the battleground states, it surprisingly remains close. But the silver lining in that, Conway, is that because it is so close, I think both candidates are going to pull out all the stops with campaigning and advertising. And I think folks will recognize this, that between Trade Desk, between Alphabet, Meta, I think we're extremely well positioned for that accelerated shift in digital advertising that they're going to utilize even over the last couple of days. As I've tuned in to YouTube to watch a clip of something, it seems as if there's two ads running, one of which is a presidential campaign ad. So I think they're fully embracing that, and that's good for us. Don't miss the move: Subscribe to TheStreet's free daily newsletter ",
+        "sentiment_compound": [
+          0.9104
+        ],
+        "id": "28048a9f-9882-4b92-8c28-1398da4c4e2a",
+        "_version_": 1814920584911388672,
+        "_root_": "28048a9f-9882-4b92-8c28-1398da4c4e2a"
+      },
+      {
+        "title": "Stock market today: Indexes close lower after CPI shows sticky inflation in September",
+        "authors": [
+          "Kelly Cloonan"
+        ],
+        "created_at": "2024-10-11T00:00:00Z",
+        "body": "Indexes slipped Thursday as investors priced in a higher-than-expected inflation reading. The data raises the possibility of a \"no landing\" scenario for the US economy. Traders still see the Fed cutting interest rates by 25 basis points at next month's meeting. Stocks fell on Thursday from records reached in the previous session, as traders took in a sticky inflation reading for September. All three benchmark indexes fell, with the Dow Jones Industrial Average down TK points, a 0.40% fall, while the S&P 500 and Nasdaq fell 0.% and 0.%, respectively. The declines follow rises across the board on Wednesday, which saw a fresh record close for both the S&P 500 and the Dow, and comes after inflation proved stickier than expected last month. September consumer price index data released on Thursday showed inflation rose 2.4% year-over-year, slightly above consensus forecasts of a 2.3% rise. The core CPI reading, which excludes more volatile food and energy costs, was up 3.3% year-over-year and just above forecasts of 3.2%. The reading, coupled with last week's blockbuster jobs report, has sparked talk of a \"no landing\" scenario for the US economy, a scenario in which strong economic growth fuels inflation and makes it harder for the Federal Reserve to cut rates. A no landing would likely mean rate cuts are fewer or slower than markets had previously forecast. It would also mean borrowers are saddled with higher interest rates on their debt for longer. After the CPI release, investors adjusted their expectations for the Federal Reserve's easing cycle. The September jobs report had killed the odds of another big 50 basis point cut, but the slightly higher-than-expected CPI likely isn't enough to fully pump the brakes on Fed easing. \"Heading into the report, we thought only a very firm print would lead the Fed to consider pausing in November based on inflation alone. We did not get that,\" analysts from Bank of America said Thursday. \"While core PCE will be firmer than recent months, we think it will be enough for the Fed to follow through with a 25bp cut in November,\" they added. Investors are now pricing in higher odds of a 25 basis point rate cut at the central bank's meeting next month, according to the CME FedWatch Tool. Meanwhile, weekly jobless claims edged up 33,000 to 258,000, according to Labor Department data released Thursday. That number marks its highest level in over a year and outpaced forecasts of 230,000. Here's where US indexes stood shortly after the closing bell on Thursday: S&P 500: 5,780.05, down 0.21% Dow Jones Industrial Average: 42,454.12, down 0.14% (-57.88 points) Nasdaq composite: 18,282.05, down 0.05%           ",
+        "sentiment_compound": [
+          -0.4019
+        ],
+        "id": "2cb09c53-9828-4484-8e28-7b3cf40ba726",
+        "_version_": 1814920584837988352,
+        "_root_": "2cb09c53-9828-4484-8e28-7b3cf40ba726"
+      },
+      {
+        "title": "Best moves for long-term investors with stocks near all-time highs, according to market experts",
+        "authors": [
+          "Brian Baker",
+          "CFA"
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": "Stocks have been on a tear for the past two years, with the S&P 500 rising about 60 percent, as investors cheered cooling inflation, the rise of artificial intelligence and the absence of an economic recession. But the rise in stocks puts major indexes at lofty valuations, leaving long-term investors wondering how they should proceed from here. Bankrate\u2019s Third-Quarter Market Mavens Survey asked market professionals what, if anything, long-term investors should do with their portfolios as stocks trade near all-time highs. Here\u2019s what they had to say. This article is one in a series discussing the results of Bankrate\u2019s Third-Quarter 2024 Market Mavens Survey: Survey: Market strategists see 10-year Treasury yield at 3.5% a year from now Best moves for long-term investors with stocks near all-time highs, according to market experts Stock market outlook for the next 12 months: Here\u2019s what top analysts are predicting into 2025 With stocks near all-time highs, there\u2019s a good chance that there have been some shifts in investors\u2019 portfolio allocations over the past few years. The investment pros surveyed by Bankrate think now is a good time to review those allocations. \u201cIf investors only do one thing, they should rebalance portfolios back to their targeted allocations,\u201d says Chris Fasciano, senior portfolio manager at Commonwealth Financial Network. Wells Fargo Investment Institute Senior Global Market Strategist Sameer Samana also says now is a good time to review your overall portfolio. \u201cUpdate your financial plan, and rebalance in-line with the plan\u2019s recommended allocations,\u201d he says. Portfolio rebalancing and diversification go hand in hand. A key reason for portfolio rebalancing is to make sure your portfolio stays diversified and doesn\u2019t have too much or too little exposure to any one asset class. \u201cFor long-term investors, holding well-diversified portfolios, or broad market indices, is generally a winning strategy,\u201d says Dec Mullarkey, managing director at SLC Management. \u201cWhile markets can seem over valued at different points, some companies will deliver the expected strong growth while others fail but leave market share for new competitors,\u201d Mullarkey says. \u201cSo, sticking with well-diversified portfolios and periodically rebalancing to your long-term asset mix targets, tends to be a reliable formula to capture stable long-term performance.\u201d With stocks at highs, some of the experts surveyed expressed a more cautious tone and suggested investors pay close attention to any holdings that may be particularly risky.       ",
+        "sentiment_compound": [
+          0.9962
+        ],
+        "id": "360255c4-2c1f-4d50-953e-a3a045337bed",
+        "_version_": 1814920585081257984,
+        "_root_": "360255c4-2c1f-4d50-953e-a3a045337bed"
+      },
+      {
+        "title": "WeightWatchers stock soars, but its cheap Wegovy knockoff 'is not a sustainable long-term business model'",
+        "authors": [
+          "Laura Bratton"
+        ],
+        "created_at": "2024-10-10T00:00:00Z",
+        "body": "WeightWatchers (WW) is trying to save its ailing business by betting on a market that threatens its very existence. The weight-loss company, previously championed by the likes of Oprah Winfrey, saw its stock spike this week after announcing that it will make copycats of Novo Nordisk's (NVO) Ozempic and Wegovy weight-loss drugs. WW International (i.e. WeightWatchers) stock jumped nearly 40% Wednesday following the news, and the stock climbed an additional 23% Thursday to close at $1.96. WW is up 172% from last week. Though WeightWatchers\u2019 core business is its dieting program, the company has attempted to get in on the booming weight-loss drug market dominated by pharmaceutical giants Eli Lilly (LLY) and Novo Nordisk (NVO). (The strategy was championed by its former CEO Sima Sistani, who recently departed the company.) WeightWatchers first attempted to secure a foothold in the weighty drug space early last year with its acquisition of Sequence, a telehealth platform specializing in weight-loss medication management. The acquisition has failed to improve the company\u2019s revenue, which fell 14.5% in 2023 and is expected to decline another 13% this year. WeightWatchers\u2019 announcement Tuesday that it will offer compounded GLP-1 drugs \u2014 which are cheaper and don't require insurance \u2014 is another shot at capitalizing on the market late in the game. Federal laws allow companies to sell compounded versions of drugs on the US Food and Drug Administration\u2019s shortage list. Regulations allow the drugs to be made at FDA-registered facilities, but the compounded medications themselves are not FDA-approved. WeightWatchers will offer a compounded semaglutide, the active ingredient in Ozempic and Wegovy. Here's the rub: Once the Novo Nordisk drugs are removed from the FDA\u2019s shortage list, WeightWatchers will no longer be able to produce compounded semaglutide drugs at scale. Tirzepatide, the active ingredient in Eli Lilly's Mounjaro and Zepbound, was removed from the list last week, posing a massive problem for companies making compounded versions of the drug. \u201cCompounding is not a sustainable long-term business model,\u201d Barclays (BARC.L) healthcare technology and distribution analyst Stephanie Davis told Yahoo Finance. Davis is one of four Wall Street analysts covering the stock tracked by Bloomberg. Half of those analysts have Equal Weight ratings on WW, and Davis is one of the other two analysts who recommend selling the stock. Meanwhile, WeightWatchers\u2019 expansion in the weight-loss drug space contradicts its core business. \u201cGLP-1s are going to cannibalize the diet industry,\u201d Davis said.            ",
+        "stocks_changes_name": [
+          "BCS"
+        ],
+        "stocks_changes_value": [
+          1.55
+        ],
+        "sentiment_compound": [
+          0.9231
+        ],
+        "id": "95f4f126-73ba-4c7b-b16b-49c542938304",
+        "_version_": 1814920585093840896,
+        "_root_": "95f4f126-73ba-4c7b-b16b-49c542938304"
+      },
+      {
+        "title": "US Vote Outcome Far From Straightforward for Stocks, BofA Says",
+        "authors": [
+          "Julien Ponthus",
+          "Sagarika Jaisinghani"
+        ],
+        "created_at": "2024-10-21T00:00:00Z",
+        "body": "(Bloomberg) -- It\u2019s tempting to view a Republican sweep of the White House and Congress as a clear bullish signal for stocks and a Democratic win as a sell. Think again, say Bank of America Corp. strategists. Most Read from Bloomberg Climate Change Is Killing Buildings in Slow Motion A Broken Oil Pipeline Plunges South Sudan\u2019s Capital Into Chaos Drug Decriminalization Spawns a Political Debacle for Progressives How Kyiv Became a Leader in Digital Services Amid Wartime Strain Cities Look to AI to Flag Residents\u2019 Trash and Recycling Mistakes The impact of the US presidential election will be more nuanced, with the potential to \u201cmake or break sub-sectors\u201d of the stock market, the BofA team including Savita Subramanian wrote in a note to clients. A Republican sweep is typically seen as most positive for small caps, but Donald Trump\u2019s promised immigration clampdown could also constitute a risk for smaller business that rely on immigrant labor. Renewable energies or electric vehicles could also be under pressure if Republicans hold both the executive and legislative branches, they said. On the other hand, a possible TikTok ban under a Democratic administration could be positive for US online media companies, they added. The race between both candidates is tightening and campaign officials and political operatives are anticipating a jump-ball election, decided at the margins in seven battleground states. BofA strategist Michael Hartnett said in a separate note last week that investors have started ramping up assets which had thrived in the wake of Trump\u2019s 2016 victory. Most Read from Bloomberg Businessweek Once You Try a Four-Day Workweek, It\u2019s Hard to Go Back AI Detectors Falsely Accuse Students of Cheating\u2014With Big Consequences The Surprisingly Lucrative Business of Recycled E-Waste Developing Countries Can\u2019t Count on Manufacturing to Supercharge Growth BYD Is Winning the Global Race to Make Cheaper EVs \u00a92024 Bloomberg L.P. ",
+        "sentiment_compound": [
+          0.8775
+        ],
+        "id": "8fa91226-fd0f-45ac-9145-be1b2ed193bb",
+        "_version_": 1814920585337110528,
+        "_root_": "8fa91226-fd0f-45ac-9145-be1b2ed193bb"
+      }
+    ]
+  }
+}
