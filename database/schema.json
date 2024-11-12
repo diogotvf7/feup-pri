@@ -29,12 +29,26 @@
             }
         },
         {
-            "name": "date_field",
-            "class": "solr.DatePointField"
+            "name": "text_phonetic",
+            "class": "solr.TextField",
+            "indexAnalyzer": {
+                "tokenizer": {"class": "solr.StandardTokenizerFactory"},
+                "filters": [
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.PhoneticFilterFactory", "encoder": "DoubleMetaphone", "inject": "false"}
+                ]
+            },
+            "queryAnalyzer": {
+                "tokenizer": {"class": "solr.StandardTokenizerFactory"},
+                "filters": [
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.PhoneticFilterFactory", "encoder": "DoubleMetaphone", "inject": "false"}
+                ]
+            }
         },
         {
-            "name": "numeric_field",
-            "class": "solr.TrieDoubleField"
+            "name": "date_field",
+            "class": "solr.DatePointField"
         }
     ],
     "add-field": [
@@ -50,15 +64,26 @@
         },
         {
             "name":"created_at",
-            "type": "date_field",
-            "indexed": true,
-            "stored": true
+            "type": "date_field"
         },
         {
             "name":"stocks_changes_value",
-            "type": "numeric_field",
+            "type": "pdoubles",
+            "multiValued": true
+        },
+        {
+            "name":"stock_changes_name",
+            "type": "text_en",
+            "multiValued": true
+        },
+        {
+            "name":"sentiment_compound",
+            "type": "pdoubles"
+        },
+        {
+            "name":"authors",
+            "type": "text_phonetic",
             "indexed": true,
-            "stored":true,
             "multiValued": true
         }
     ]

@@ -5,12 +5,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 import os, spiders, json
+from collections import Counter
+
 
 os.makedirs("database", exist_ok=True)
 
 homepage = "https://finance.yahoo.com"
-#article_page = "https://finance.yahoo.com/topic/stock-market-news"
-article_page = "https://finance.yahoo.com/topic/latest-news/"
+article_page = "https://finance.yahoo.com/topic/stock-market-news"
+#article_page = "https://finance.yahoo.com/topic/latest-news/"
 stock_pages = ["https://finance.yahoo.com/markets/stocks/most-active", "https://finance.yahoo.com/markets/stocks/gainers", "https://finance.yahoo.com/markets/stocks/losers"]
 articles_links = set()
 stocks_links = set()
@@ -96,15 +98,14 @@ def get_stock_links(driver, s_links):
         s_links.update(temp_links)
 
 
-get_stock_links(driver, stocks_links)
-
+#get_article_links(driver, articles_links)
+#get_stock_links(driver, stocks_links)
 print(len(stocks_links))
 
 counter = 0
 stocks_links_list = list(stocks_links)  # Convert the set to a list
 
-
-for i in range(0, len(stocks_links_list)):
+""" for i in range(0, len(stocks_links_list)):
     print("Read stock: " + stocks_links_list[i] + " number " + str(counter))
     try:
         stock = spiders.read_stock(driver, stocks_links_list[i])
@@ -117,9 +118,27 @@ for i in range(0, len(stocks_links_list)):
         driver = webdriver.Chrome()
         driver.get(homepage)
         spiders.reject_cookies(driver)
-    counter += 1   
+    counter += 1    """
 
 
+counter = 0
+articles_links_list = list(articles_links)
+print(len(articles_links_list))
+
+""" for i in range(0, len(articles_links)):
+    if(articles_links_list[i] != "https://finance.yahoo.com/news/home-furniture-retailer-stocks-q2-075938416.html"):
+        print("Read article: " + articles_links_list[i] + " number " + str(counter))
+        counter += 1
+        try:
+            article = spiders.read_article(driver, articles_links_list[i])
+            articles.append(article)
+        except Exception as e:
+            print("Exception thrown: ", str(e))
+        if (i % 100 == 0):  
+            driver = webdriver.Chrome()
+            driver.get(homepage)
+            spiders.reject_cookies(driver)
+ """
 
 def load_json_data(filepath):
     if os.path.exists(filepath):  
@@ -137,10 +156,63 @@ def append_to_json(filepath, new_data):
         json.dump(current_data, f, indent=4, ensure_ascii=False)  
 
 #append_to_json('database/article.json', [article.to_dict() for article in articles])
-append_to_json('database/stock.json', [stock.to_dict() for stock in stocks])
+#append_to_json('database/stock.json', [stock.to_dict() for stock in stocks])
 
-#TODO: Change data format
+def count_unique_articles(filepath):
+    data = load_json_data(filepath)
+    unique_titles = set(article['title'] for article in data if 'title' in article)
+    print(f"Total unique articles: {len(unique_titles)}")
+    return unique_titles
 
+def find_duplicate_articles(filepath):
+    data = load_json_data(filepath)
+    
+    title_counter = Counter(article['title'] for article in data if 'title' in article)
+    
+    duplicates = {title: count for title, count in title_counter.items() if count > 1}
+    
+    if duplicates:
+        print("Duplicate articles found:")
+        for title, count in duplicates.items():
+            print(f'"{title}" appears {count} times')
+    else:
+        print("No duplicate articles found.")
+
+def remove_duplicates_and_save(filepath):
+    data = load_json_data(filepath)
+    unique_articles = {}
+    
+    for article in data:
+        title = article.get('title')
+        if title and title not in unique_articles:
+            unique_articles[title] = article  # Store article in dictionary by title
+    cleaned_data = list(unique_articles.values())
+    
+    with open(filepath, 'w', encoding='utf-8') as f:
+        json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
+    
+    print(f"Removed duplicates. {len(data) - len(cleaned_data)} duplicates removed.")
+    print(f"Saved cleaned data to {filepath}.")
+
+
+def print_unique_dates(filepath):
+    data = load_json_data(filepath)
+    unique_dates = set()
+    for article in data:
+        date_str = article.get('created_at')
+        if date_str:
+            try:
+                unique_dates.add(date_str)  
+            except ValueError:
+                print(f"Invalid date format for article titled '{article.get('title', 'Unknown')}'")
+    print("Unique dates in the articles:")
+    for date in sorted(unique_dates):
+        print(date)
+
+print_unique_dates('database/data.json')
+unique_titles = count_unique_articles('database/data.json')
+#remove_duplicates_and_save('database/data.json')
+find_duplicate_articles('database/data.json')
 
 driver.close()
 
