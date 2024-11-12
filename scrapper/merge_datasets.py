@@ -22,7 +22,16 @@ date_mapping = {
     '2024-10-21T00:00:00.000Z' : ['02/11/2024', '22/10/2024', '04/11/2024'],
     '2024-10-22T00:00:00.000Z': ['02/11/2024', '04/11/2024'],
     '2024-11-01T00:00:00.000Z': ['02/11/2024', '04/11/2024'],
-    '2024-11-02T00:00:00.000Z' : ['02/11/2024', '04/11/2024']
+    '2024-11-02T00:00:00.000Z' : ['02/11/2024', '04/11/2024'],
+    '2024-11-04T00:00:00.000Z' : ['12/11/2024'],
+    '2024-11-05T00:00:00.000Z' : ['12/11/2024'],
+    '2024-11-06T00:00:00.000Z' : ['12/11/2024'],
+    '2024-11-07T00:00:00.000Z' : ['12/11/2024'],
+    '2024-11-08T00:00:00.000Z' : ['12/11/2024'],
+    '2024-11-09T00:00:00.000Z' : ['12/11/2024'],
+    '2024-11-10T00:00:00.000Z' : ['12/11/2024'],
+    '2024-11-11T00:00:00.000Z' : ['12/11/2024'],
+    '2024-11-12T00:00:00.000Z' : ['12/11/2024'],
 }
 
 for _, article_row in article_df.iterrows():
@@ -37,8 +46,11 @@ for _, article_row in article_df.iterrows():
         "stocks_changes_value": []  
     }
 
-    stock_names = article_row['stocks_changes_name'] if len(article_row['stocks_changes_name']) > 0 else []
-
+    try:
+        stock_names = article_row['stocks_changes_name'] if len(article_row['stocks_changes_name']) > 0 else []
+    except TypeError:
+        print("Type error")
+    
     for stock_name in stock_names:
         target_date = date_mapping.get(article_date)
 
