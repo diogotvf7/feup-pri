@@ -1,0 +1,90 @@
+{
+	"add-field-type": [
+        {
+            "name":"regular_text",
+            "class":"solr.TextField",
+            "indexAnalyzer": {
+                "charFilter": {
+                    "class": "solr.MappingCharFilterFactory",
+                    "mapping": "mapping-FoldToASCII.txt"
+                },
+                "tokenizer": {
+                    "class": "solr.ClassicTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ClassicFilterFactory"},
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.FlattenGraphFilterFactory"},
+                    {"class": "solr.PorterStemFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true},
+                    {"class":"solr.FlattenGraphFilterFactory"},
+                    {"class": "solr.RemoveDuplicatesTokenFilterFactory"}
+                ]
+            },
+            "queryAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.ClassicTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ClassicFilterFactory"},
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SynonymGraphFilterFactory", "synonyms": "synonyms.txt"},
+                    {"class": "solr.PhoneticFilterFactory", "encoder": "DoubleMetaphone"},
+                    {"class": "solr.RemoveDuplicatesTokenFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "date_field",
+            "class": "solr.DatePointField"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "body",
+            "type": "regular_text",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "title",
+            "type": "regular_text",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name":"created_at",
+            "type": "date_field",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name":"stocks_changes_value",
+            "type": "pdoubles",
+            "multiValued": true,
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name":"stock_changes_name",
+            "type": "text_en",
+            "multiValued": true,
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name":"sentiment_compound",
+            "type": "pdoubles",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name":"authors",
+            "type": "regular_text",
+            "multiValued": true,
+            "indexed": true,
+            "stored": true
+        }
+    ]
+}

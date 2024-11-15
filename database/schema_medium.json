@@ -1,0 +1,58 @@
+{
+	"add-field-type": [
+        {
+            "name":"regular_text",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                    
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.PorterStemFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true}
+                ]
+            }
+        }
+    ],
+    "add-field": [
+        {
+            "name": "body",
+            "type": "regular_text"
+        },
+        {
+            "name": "title",
+            "type": "regular_text"
+        },
+        {
+            "name":"stocks_changes_value",
+            "type": "pdoubles",
+            "multiValued": true
+        },
+        {
+            "name":"stock_changes_name",
+            "type": "text_en",
+            "multiValued": true
+        },
+        {
+            "name":"sentiment_compound",
+            "type": "pdoubles"
+        },
+        {
+            "name":"authors",
+            "type": "regular_text",
+            "multiValued": true
+        }
+    ]
+}

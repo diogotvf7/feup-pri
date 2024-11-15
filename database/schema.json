@@ -13,7 +13,6 @@
                     {"class":"solr.PorterStemFilterFactory"},
                     {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true},
                     {"class":"solr.FlattenGraphFilterFactory"}
-
                 ]
             },
             "queryAnalyzer":{
@@ -64,7 +63,8 @@
         },
         {
             "name":"created_at",
-            "type": "date_field"
+            "type": "date_field",
+            "stored" : true
         },
         {
             "name":"stocks_changes_value",
@@ -74,11 +74,13 @@
         {
             "name":"stock_changes_name",
             "type": "text_en",
-            "multiValued": true
+            "multiValued": true,
+            "indexed": true
         },
         {
             "name":"sentiment_compound",
-            "type": "pdoubles"
+            "type": "pdoubles",
+            "indexed":true
         },
         {
             "name":"authors",

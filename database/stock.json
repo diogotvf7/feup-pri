@@ -486,7 +486,7 @@
     {
         "Stock": "GWW",
         "Stock Title": "W.W. Grainger, Inc.",
-        "Live Price": "1,085.04",
+        "Live Price": "1085.04",
         "Price Change": "+59.88",
         "Price Change Percentage": "+5.84%",
         "Previous Close": "1,025.16",
@@ -5828,7 +5828,7 @@
     {
         "Stock": "TPL",
         "Stock Title": "Texas Pacific Land Corporation",
-        "Live Price": "1,058.42",
+        "Live Price": "1058.42",
         "Price Change": "+56.22",
         "Price Change Percentage": "+5.61%",
         "Previous Close": "1,002.20",
@@ -6485,7 +6485,7 @@
     {
         "Stock": "TDG",
         "Stock Title": "TransDigm Group Incorporated",
-        "Live Price": "1,410.42",
+        "Live Price": "1410.42",
         "Price Change": "+41.44",
         "Price Change Percentage": "+3.03%",
         "Previous Close": "1,368.98",
@@ -16919,7 +16919,7 @@
     {
         "Stock": "MTD",
         "Stock Title": "Mettler-Toledo International Inc.",
-        "Live Price": "1,342.09",
+        "Live Price": "1342.09",
         "Price Change": "+50.34",
         "Price Change Percentage": "+3.90%",
         "Previous Close": "1,291.75",
@@ -27630,7 +27630,7 @@
     {
         "Stock": "TPL",
         "Stock Title": "Texas Pacific Land Corporation",
-        "Live Price": "1,224.04",
+        "Live Price": "1224.04",
         "Price Change": "+51.42",
         "Price Change Percentage": "+4.39%",
         "Previous Close": "1,172.62",
@@ -37558,7 +37558,7 @@
     {
         "Stock": "MELI",
         "Stock Title": "MercadoLibre, Inc.",
-        "Live Price": "1,961.16",
+        "Live Price": "1961.16",
         "Price Change": "+89.15",
         "Price Change Percentage": "+4.76%",
         "Previous Close": "1,872.01",
@@ -43435,7 +43435,7 @@
     {
         "Stock": "MTD",
         "Stock Title": "Mettler-Toledo International Inc.",
-        "Live Price": "1,250.07",
+        "Live Price": "1250.07",
         "Price Change": "-59.96",
         "Price Change Percentage": "-4.58%",
         "Previous Close": "1,310.03",
