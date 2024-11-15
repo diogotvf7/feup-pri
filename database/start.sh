@@ -10,7 +10,7 @@ docker cp my_synonyms.txt meic_solr:/var/solr/data/stocks/conf
 sleep 3
 
 
-curl -X POST -H 'Content-type:application/json' --data-binary @schema.json http://localhost:8983/solr/stocks/schema
+curl -X POST -H 'Content-type:application/json' --data-binary @schema_bad.json http://localhost:8983/solr/stocks/schema
 
 sleep 3
 curl -X POST -H 'Content-type:application/json' \--data-binary @data.json \http://localhost:8983/solr/stocks/update?commit=true

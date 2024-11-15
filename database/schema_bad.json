@@ -15,10 +15,10 @@
                     {"class": "solr.ClassicFilterFactory"},
                     {"class": "solr.LowerCaseFilterFactory"},
                     {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
-                    {"class": "solr.FlattenGraphFilterFactory"},
                     {"class": "solr.PorterStemFilterFactory"},
                     {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true},
-                    {"class":"solr.FlattenGraphFilterFactory"},
+                    {"class": "solr.FlattenGraphFilterFactory"},
+                    {"class": "solr.PhoneticFilterFactory", "encoder": "DoubleMetaphone", "inject": "false"},
                     {"class": "solr.RemoveDuplicatesTokenFilterFactory"}
                 ]
             },
