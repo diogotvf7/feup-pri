@@ -209,10 +209,10 @@ def print_unique_dates(filepath):
     for date in sorted(unique_dates):
         print(date)
 
-print_unique_dates('database/data.json')
-unique_titles = count_unique_articles('database/data.json')
+#print_unique_dates('database/data.json')
+#unique_titles = count_unique_articles('database/data.json')
 #remove_duplicates_and_save('database/data.json')
-find_duplicate_articles('database/data.json')
+#find_duplicate_articles('database/data.json')
 
 driver.close()
 
