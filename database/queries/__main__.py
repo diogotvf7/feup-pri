@@ -8,7 +8,7 @@ import threading
 from pathlib import Path
 
 from json_handler import JSONHandler
-from scripts import query1, query2, query3, query4, query5, query6
+from scripts import query1, query2, query3, query4, query5, query6, query7
 
 OUTPUT_FILE = Path(__file__).resolve().parent / "response.json"
 PORT = 8000
@@ -19,7 +19,8 @@ QUERIES = [
     query3,
     query4,
     query5,
-    query6
+    query6,
+    query7,
 ]
 
 last_mod_time = None
@@ -93,16 +94,14 @@ def main():
         while True:
             clear_screen()
             i = int(input("""
-                          Which query would you like to run?
-                            1. Field boost
-                            2. Independent boost
-                            3. Phrase match
-                            4. Proximity
-                            5. Term boost
-                            6. Wildcard
-                            7. Exit
+Which query would you like to run?
+    1. Query 1
+    2. Query 2
+    3. Query 3
+    4. Query 4
+    5. Exit
                     """))
-            if i >= 1 and i <= 6:
+            if i >= 1 and i <= 4:
                 response = QUERIES[i - 1]()
                 if response.status_code == 200:
                     try:
@@ -112,7 +111,7 @@ def main():
                         print("Received non-JSON response or empty body.")
                 else:
                     print(f"Error: {response.status_code}")
-            elif i == 7:
+            elif i == 5:
                 stop_flag.set()
                 break
             else:
