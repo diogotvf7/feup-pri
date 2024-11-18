@@ -1,6 +1,6 @@
 {
     "query": "nvidia stock grow ",
-    "fields": "*",
+    "fields": "title, score",
     "rows": 50,
     "defType": "edismax",
     "queryFields": "title body authors"
