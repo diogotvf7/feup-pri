@@ -11,7 +11,7 @@ def query3():
             "q.op": "AND",
             "sort":"created_at desc",
 
-            "q": "US presidential race effects on the stock market",
+            "q": "US election effects on the stock market",
         }
     )
 
