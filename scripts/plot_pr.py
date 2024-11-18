@@ -2,7 +2,6 @@
 
 import argparse
 import sys
-
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -54,8 +53,8 @@ def main(qrels_file: str, output_file: str):
     # Compute Mean Average Precision (MAP) as the mean of precision values for relevant documents
     map_score = np.sum(relevant_ranks) / len(y_true) if relevant_ranks else 0
 
-    # Compute the 11-point interpolated precision-recall curve
-    recall_levels = np.linspace(0.0, 1.0, 11)
+    # Compute the 11-point interpolated precision-recall curve with 0.1 recall intervals
+    recall_levels = np.arange(0.0, 1.1, 0.1)  # Change recall levels to update every 0.1
     interpolated_precision = [
         max([p for p, r in zip(precision, recall) if r >= r_level], default=0)
         for r_level in recall_levels
@@ -64,7 +63,7 @@ def main(qrels_file: str, output_file: str):
     # Compute the Area Under Curve (AUC) for the precision-recall curve
     auc_score = np.trapz(interpolated_precision, recall_levels)
 
-    # Plot the 11-point interpolated precision-recall curve
+    # Plot the precision-recall curve with the updated recall intervals
     plt.plot(
         recall_levels,
         interpolated_precision,
@@ -76,8 +75,8 @@ def main(qrels_file: str, output_file: str):
     # Customize plot appearance
     plt.xlabel("Recall")
     plt.ylabel("Precision")
-    plt.xlim(0, 1)
-    plt.ylim(0, 1)
+    plt.xlim(0, 1.1)  # Extend the x-axis slightly beyond 1
+    plt.ylim(0, 1.1)  # Extend the y-axis slightly beyond 1
     plt.legend(loc="lower left", prop={"size": 10})
 
     # Keep the title as "Precision-Recall Curve"

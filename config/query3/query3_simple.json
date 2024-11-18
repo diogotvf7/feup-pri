@@ -3,8 +3,8 @@
     "params": {
         "defType": "edismax",
         "qf": "title body authors",
-        "fl": "title, score",
+        "fl": "id, score",
         "q.op": "AND",
-        "rows": 20
+        "rows": 10
     }
 }
