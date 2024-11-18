@@ -1,0 +1,32 @@
+{
+	"add-field-type": [
+    ],
+    "add-field": [
+        {
+            "name": "body",
+            "type": "text_general"
+        },
+        {
+            "name": "title",
+            "type": "text_general"
+        },
+        {
+            "name":"stocks_changes_name",
+            "type": "string",
+            "multiValued": true
+        },
+        {
+            "name":"authors",
+            "type": "text_general"
+        },
+        {
+            "name":"stocks_changes_value",
+            "type": "pdoubles",
+            "multiValued": true
+        },
+        {
+            "name":"sentiment_compound",
+            "type": "pdoubles"
+        }
+    ]
+}
