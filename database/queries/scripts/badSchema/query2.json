@@ -1,0 +1,7 @@
+{
+    "query": "Tesla earnings report",
+    "fields": "*",
+    "rows": 50,
+    "defType": "edismax",
+    "queryFields": "title body authors"
+}

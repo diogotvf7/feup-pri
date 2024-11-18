@@ -1,5 +1,0 @@
-params={
-    "q": "US presidential race effects on the stock market",
-    "fl": "*",  
-    "rows": 50
-}
