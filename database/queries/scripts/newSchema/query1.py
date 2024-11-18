@@ -1,6 +1,6 @@
 import requests
 
-def query2():
+def query1():
     response = requests.get(
         "http://localhost:8983/solr/stocks/select",
         params={

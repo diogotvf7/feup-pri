@@ -1,5 +1,0 @@
-params={
-    "q": "Apple stock forecast",
-    "fl": "*",  
-    "rows": 50
-}
