@@ -1,6 +1,7 @@
 import requests
 
-def query1():
+def query4():
+
     response = requests.get(
         "http://localhost:8983/solr/stocks/select",
         params={
@@ -8,15 +9,15 @@ def query1():
             "qf": "title^3 body^2 authors",
             "pf": "title^3 author^2 body",
             "indent": "true",
-            "q.op": "AND",
+            "q.op": "OR",
             "sort":"created_at desc",
 
-            "q": "Tesla earnings report",
+            "q": "Why has NVIDIA stock skyrocketed in the past month?",
         }
     )
 
     return response
 
 if __name__ == "__main__":
-    response = query1()
+    response = query4()
     print(response.text)

@@ -1,0 +1,5 @@
+params={
+    "q": "Why has NVIDIA stock skyrocketed in the past month?",
+    "fl": "*",  
+    "rows": 50
+}
