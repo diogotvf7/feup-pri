@@ -1,0 +1,5 @@
+params={
+    "q": "Tesla earnings report",
+    "fl": "*",  
+    "rows": 50
+}
