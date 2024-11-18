@@ -1,7 +1,0 @@
-{
-    "query": "US election effects on the stock market",
-    "fields": "title, score",
-    "rows": 50,
-    "defType": "edismax",
-    "queryFields": "title body authors"
-}

@@ -1,7 +1,0 @@
-{
-  "query": "Apple stock forecast",
-  "fields": "title, score",
-  "rows": 50,
-  "defType": "edismax",
-  "queryFields": "title body authors"
-}

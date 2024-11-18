@@ -1,0 +1,10 @@
+{
+    "query": "nvidia stock grow",
+    "params": {
+        "defType": "edismax",
+        "qf": "title body authors",
+        "fl": "title, score",
+        "q.op": "AND",
+        "rows": 20
+    }
+}
