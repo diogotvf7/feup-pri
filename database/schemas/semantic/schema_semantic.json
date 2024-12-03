@@ -1,0 +1,106 @@
+{
+	"add-field-type": [
+        {
+            "name":"regular_text",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.PorterStemFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true},
+                    {"class":"solr.FlattenGraphFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.PorterStemFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true}
+                ]
+            }
+        },
+        {
+            "name": "text_phonetic",
+            "class": "solr.TextField",
+            "indexAnalyzer": {
+                "tokenizer": {"class": "solr.StandardTokenizerFactory"},
+                "filters": [
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.PhoneticFilterFactory", "encoder": "DoubleMetaphone", "inject": "false"}
+                ]
+            },
+            "queryAnalyzer": {
+                "tokenizer": {"class": "solr.StandardTokenizerFactory"},
+                "filters": [
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.PhoneticFilterFactory", "encoder": "DoubleMetaphone", "inject": "false"}
+                ]
+            }
+        },
+        {
+            "name": "date_field",
+            "class": "solr.DatePointField"
+        },
+        {
+            "name" : "textVEctor",
+            "class" : "solr.DenseVectorField",
+            "vectorDimension": 384,
+            "similarityFunction": "cosine",
+            "knnAlgorithm": "hnsw"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "body",
+            "type": "regular_text",
+            "indexed": true
+        },
+        {
+            "name": "title",
+            "type": "regular_text",
+            "indexed": true
+        },
+        {
+            "name":"created_at",
+            "type": "date_field",
+            "stored" : true
+        },
+        {
+            "name":"stocks_changes_value",
+            "type": "pdoubles",
+            "multiValued": true
+        },
+        {
+            "name":"stock_changes_name",
+            "type": "text_en",
+            "multiValued": true,
+            "indexed": true
+        },
+        {
+            "name":"sentiment_compound",
+            "type": "pdoubles",
+            "indexed":true
+        },
+        {
+            "name":"authors",
+            "type": "text_phonetic",
+            "indexed": true,
+            "multiValued": true
+        },
+        {
+            "name": "vector",
+            "type": "courseVector",
+            "indexed": true,
+            "stored": true
+
+        }
+    ]
+}
