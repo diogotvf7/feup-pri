@@ -1,0 +1,22 @@
+{
+    "query": "Apple stock forecast",
+    "params": {
+        "defType": "edismax",
+        "qf": "title^5 body^4 authors^2 stock_changes_name^3 sentiment_compound^1",
+        "pf": "title^4 body^3",
+        "pf2": "title^2 body^1 stock_changes_name^1",
+        "pf3": "title^1 body^1",
+        "mm": "3<-2 6<75%", 
+        "tie": "0.1",
+        "bq": [
+            "stock_changes_name:Apple^3", 
+            "sentiment_compound:[0.5 TO *]^2"
+        ],
+        "bf": "recip(ms(NOW,created_at),3.16e-11,1,1)^2",
+        "boost": "query(stocks_changes_value:[10 TO *])^2",
+        "q.op": "AND",
+        "fl": "id,score,title,authors,created_at,stocks_changes_value,sentiment_compound",
+        "sort": "score desc",
+        "rows": 10
+    }
+}
