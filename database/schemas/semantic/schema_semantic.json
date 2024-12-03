@@ -50,7 +50,7 @@
             "class": "solr.DatePointField"
         },
         {
-            "name" : "textVEctor",
+            "name" : "textVector",
             "class" : "solr.DenseVectorField",
             "vectorDimension": 384,
             "similarityFunction": "cosine",
@@ -97,7 +97,7 @@
         },
         {
             "name": "vector",
-            "type": "courseVector",
+            "type": "textVector",
             "indexed": true,
             "stored": true
 

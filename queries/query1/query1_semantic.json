@@ -15,7 +15,7 @@
         "bf": "recip(ms(NOW,created_at),3.16e-11,1,1)^2",
         "boost": "query(stocks_changes_value:[10 TO *])^2",
         "q.op": "AND",
-        "fl": "id,score,title,authors,created_at,stocks_changes_value,sentiment_compound",
+        "fl": "id",
         "sort": "score desc",
         "rows": 10
     }

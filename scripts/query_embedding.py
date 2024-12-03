@@ -1,20 +1,37 @@
+#!/usr/bin/env python3
+
+import argparse
+import json
+import sys
+from pathlib import Path
 import requests
 from sentence_transformers import SentenceTransformer
 
+
 def text_to_embedding(text):
+    """
+    Convert the given text into an embedding using the SentenceTransformer model.
+    
+    Arguments:
+    - text: The text to convert to an embedding.
+
+    Output:
+    - A string representing the embedding in the expected format for Solr.
+    """
     model = SentenceTransformer('all-MiniLM-L6-v2')
     embedding = model.encode(text, convert_to_tensor=False).tolist()
-    
+
     # Convert the embedding to the expected format
     embedding_str = "[" + ",".join(map(str, embedding)) + "]"
     return embedding_str
+
 
 def solr_knn_query(endpoint, collection, embedding):
     url = f"{endpoint}/{collection}/select"
 
     data = {
         "q": f"{{!knn f=vector topK=10}}{embedding}",
-        "fl": "id,title,score",
+        "fl": "id",
         "rows": 10,
         "wt": "json"
     }
@@ -27,27 +44,58 @@ def solr_knn_query(endpoint, collection, embedding):
     response.raise_for_status()
     return response.json()
 
-def display_results(results):
-    docs = results.get("response", {}).get("docs", [])
-    if not docs:
-        print("No results found.")
-        return
 
-    for doc in docs:
-        print(f"* {doc.get('id')} {doc.get('title')} [score: {doc.get('score'):.2f}]")
+
+
+def print_results_to_stdout(results):
+    """
+    Print the search results to standard output in JSON format.
+
+    Arguments:
+    - results: The JSON results returned from Solr.
+    """
+    json.dump(results, sys.stdout, indent=2)
+    print()  # Ensure there is a newline after the JSON output
+
 
 def main():
-    solr_endpoint = "http://localhost:8983/solr"
-    collection = "semantic_courses"
-    
-    query_text = input("Enter your query: ")
-    embedding = text_to_embedding(query_text)
+    # Set up argument parsing for the command-line interface
+    parser = argparse.ArgumentParser(
+        description="Query Solr using a semantic embedding and print results to stdout."
+    )
 
-    try:
-        results = solr_knn_query(solr_endpoint, collection, embedding)
-        display_results(results)
-    except requests.HTTPError as e:
-        print(f"Error {e.response.status_code}: {e.response.text}")
+    # Add arguments for the query text, Solr URI, collection name
+    parser.add_argument(
+        "--query",
+        type=str,
+        required=True,
+        help="The text query to search for in Solr."
+    )
+    parser.add_argument(
+        "--uri",
+        type=str,
+        default="http://localhost:8983/solr",
+        help="The URI of the Solr instance (default: http://localhost:8983/solr)."
+    )
+    parser.add_argument(
+        "--collection",
+        type=str,
+        default="stocks",
+        help="Name of the Solr collection to query (default: 'stocks')."
+    )
+
+    # Parse command-line arguments
+    args = parser.parse_args()
+
+    # Convert the query text to an embedding
+    embedding = text_to_embedding(args.query)
+
+    # Perform the Solr k-NN query using the embedding
+    results = solr_knn_query(args.uri, args.collection, embedding)
+
+    # Print the results to standard output
+    print_results_to_stdout(results)
+
 
 if __name__ == "__main__":
     main()

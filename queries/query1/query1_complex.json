@@ -10,7 +10,7 @@
         "tie": "0.1",
         "boost": "",
         "q.op": "AND",
-        "fl": "id,score,title,authors,publish_date",
+        "fl": "id",
         "indent": "true",
         "rows": 10
         }
