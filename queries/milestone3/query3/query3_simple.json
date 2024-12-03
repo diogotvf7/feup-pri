@@ -1,0 +1,10 @@
+{
+    "query": "US election effects on the stock market",
+    "params": {
+        "defType": "edismax",
+        "qf": "title body authors",
+        "fl": "id, score",
+        "q.op": "AND",
+        "rows": 10
+    }
+}
