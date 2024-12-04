@@ -7,6 +7,7 @@ services:
     volumes:
       - stocks:/stocks
       - data:/data
+      # - ${PWD}/entrypoint/update_webxml.sh:/docker-entrypoint-initdb.d/update_webxml.sh
     command: bash -c "sh /data/load.sh & solr-precreate stocks /stocks"
 
 volumes:

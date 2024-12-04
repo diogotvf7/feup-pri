@@ -14,6 +14,7 @@ type Document = {
   stocks_changes_value: Array<number>  
   sentiment_compound: number
   id: number  
+  score: number
   _version_: number  
   _root_: string  
 }
@@ -45,6 +46,7 @@ const urlParams = (query : string) => new URLSearchParams({
 function SearchPage() {
   const [documents, setDocuments] = useState([])
   const [query, setQuery] = useState("")
+  
 
   const fetchData = async () => {
     try {
@@ -58,8 +60,8 @@ function SearchPage() {
 
         if (!response.ok) console.log("Fodeu!");
         const data = await response.json();
-
-        setDocuments(data.results)
+        
+        setDocuments(data.response.docs)
     } catch (error) {
         console.error(error)
     }
@@ -85,7 +87,7 @@ function SearchPage() {
         <div className="results">
           {documents.map((document: Document) => (
               <div key={document.id}>
-                <p>{document.title}</p>
+                <p>{document.score}</p>
               </div>
           ))}
         </div>
