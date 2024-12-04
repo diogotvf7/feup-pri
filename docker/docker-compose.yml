@@ -1,0 +1,20 @@
+services:
+  solr:
+    container_name: solr_pri
+    image: solr:9.7
+    ports:
+     - "8983:8983"
+    volumes:
+      - stocks:/stocks
+    command:
+      - solr-precreate
+      - stocks
+      - /stocks
+
+volumes:
+  stocks:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/stocks
+      o: bind

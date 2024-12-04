@@ -1,0 +1,44 @@
+experience, know, receive, see, go_through, get, live, feel, have
+rise, increase, grow, climb, ascend, upsurge, surge, boost, improve
+fall, decrease, drop, decline, plummet, tumble, fall_off, dip
+predict, forecast, anticipate, project, estimate, foretell, expect
+market, marketplace, economy, trade, financial_market, sector
+invest, stake, commit, fund, finance, contribute
+profit, earn, income, return, gain, surplus, benefit, revenue
+loss, deficit, shortfall, decrease, decline, loss_of_capital
+analyze, examine, assess, evaluate, review, study, appraise
+value, worth, price, cost, assess, valuate, monetary_value
+risk, danger, hazard, threat, expose, uncertainty, liability
+inflation, price_rise, increase_in_price, cost_of_living_increase
+deflation, price_fall, decrease_in_price, economic_contract
+recession, economic_downturn, slow, decline, contract
+diversify, vary, assort, mix, spread_invest
+liquidity, cash_available, cash_flow, ease_of_access
+equity, stock, share, own, capital
+debt, liability, obligation, due, financial_commit
+credit, borrow_capacity, trust, creditworthy, loan_ability
+devalue, depreciate, reduce_in_value, drop_in_value
+appreciate, increase_in_value, rise_in_value, enhance
+portfolio, collect, set_of_invest, hold
+analyze, evaluate, appraise, financial_advisor, research
+perform, result, outcome, effective, productive
+trend, pattern, direct, tend, move
+share, stock, equity_unit, own_interest
+transact, deal, exchange, operate, trade
+volatility, unstable, fluctuate, uncertain, vary
+capital, fund, resource, asset, wealth
+acquire, purchase, buyout, take_over, procure
+merge, combine, consolidate, unite, ally
+startup, new_business, emerging_company, venture
+strategize, plan, approach, method, tactic
+benchmark, standard, reference_point, compare
+sustain, viable, endure, durable, long_life
+forecast, project, outlook, predict, estimate
+yield, return, profit, output, earn
+scale, grow_potential, adapt, expand
+collateral, secure, guarantee, back, assure
+dilute, reduce, decrease, weaken, lessen
+audit, examine, review, inspect, evaluate
+fundamental, essential, basic, primary, core
+technical, analyze, operate, apply
+ai, artificial_intelligence, chatgpt, gemini
