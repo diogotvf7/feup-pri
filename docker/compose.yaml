@@ -1,0 +1,26 @@
+services:
+  solr:
+    container_name: solr_pri
+    build: .
+    # image: solr:9.7
+    ports:
+     - "8983:8983"
+    volumes:
+      - stocks:/stocks
+      - data:/data
+      # - ${PWD}/entrypoint/update_webxml.sh:/docker-entrypoint-initdb.d/update_webxml.sh
+    command: bash -c "sh /data/load.sh & solr-precreate stocks /stocks"
+
+volumes:
+  data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/data
+      o: bind
+  stocks:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/stocks
+      o: bind
