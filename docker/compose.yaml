@@ -1,7 +1,8 @@
 services:
   solr:
     container_name: solr_pri
-    image: solr:9.7
+    build: .
+    # image: solr:9.7
     ports:
      - "8983:8983"
     volumes:

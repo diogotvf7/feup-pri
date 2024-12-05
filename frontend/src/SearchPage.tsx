@@ -2,9 +2,6 @@ import logo from "./logo.svg";
 import { Input } from "src/components/ui/input";
 import { useEffect, useState } from "react";
 
-import axios from 'axios';
-
-
 type Document = {
   title: string
   authors: Array<string>
@@ -19,25 +16,12 @@ type Document = {
   _root_: string  
 }
 
-const get_query = (query : string) => ({
-  query: query,
-  params: {
-    defType: "edismax",
-    qf: "title^3 body^2 authors",
-    pf: "title^3 author^2 body",
-    fl: "id,score",
-    "q.op": "AND",
-    indent: "true",
-    rows: 10,
-  }
-})
-
 const urlParams = (query : string) => new URLSearchParams({
   q: query,
   defType: "edismax",
   qf: "title^3 body^2 authors",
   pf: "title^3 author^2 body",
-  fl: "id,score",
+  fl: "*",
   "q.op": "AND",
   indent: "true",
   rows: "10"
@@ -50,7 +34,6 @@ function SearchPage() {
 
   const fetchData = async () => {
     try {
-
         const response = await fetch(`http://localhost:8983/solr/stocks/select?${urlParams(query)}`, {
           method: "GET",
           headers: {
@@ -58,18 +41,21 @@ function SearchPage() {
           },
         });
 
-        if (!response.ok) console.log("Fodeu!");
+        if (!response.ok) console.log(response.statusText);
         const data = await response.json();
         
+        console.log(`http://localhost:8983/solr/stocks/select?${urlParams(query)}`, data.response.docs);
         setDocuments(data.response.docs)
+        console.log('documents: ', documents);
+        
     } catch (error) {
         console.error(error)
     }
   }
   
   useEffect(() => {
-    // console.log(get_query(query));
     fetchData()
+    console.log(documents);    
   }, [query])
   
   return (
@@ -87,7 +73,7 @@ function SearchPage() {
         <div className="results">
           {documents.map((document: Document) => (
               <div key={document.id}>
-                <p>{document.score}</p>
+                <p>{document.title}</p>
               </div>
           ))}
         </div>
