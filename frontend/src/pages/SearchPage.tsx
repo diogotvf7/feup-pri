@@ -39,7 +39,7 @@ const SearchPage = () => {
       if (!response.ok) console.log(response.statusText)
       const data = await response.json()
 
-      setArticles(data.response.docs)
+      setArticles(data?.response?.docs)
     } catch (error) {
       console.error(error)
     }
