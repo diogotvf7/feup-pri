@@ -31,7 +31,7 @@ def solr_knn_query(endpoint, collection, embedding):
 
     data = {
         "q": f"{{!knn f=vector topK=10}}{embedding}",
-        "fl": "id",
+        "fl": "id, ",
         "rows": 10,
         "wt": "json"
     }

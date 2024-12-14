@@ -1,12 +1,12 @@
-docker stop meic_solr
-docker rm meic_solr
+docker stop meic_solr_semantic
+docker rm meic_solr_semantic
 
 echo 'Starting server at http://localhost:8983'
 
-docker run -p 8983:8983 --name meic_solr -v ${PWD}:/data -d solr:9 solr-precreate stocks
+docker run -p 8983:8983 --name meic_solr_semantic -v ${PWD}:/data -d solr:9 solr-precreate stocks
 sleep 10
 
-docker cp schemas/my_synonyms.txt meic_solr:/var/solr/data/stocks/conf
+docker cp schemas/my_synonyms.txt meic_solr_semantic:/var/solr/data/stocks/conf
 sleep 3
 
 

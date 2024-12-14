@@ -1,0 +1,31 @@
+{
+    "add-field-type": [
+        {
+            "name" : "textVector",
+            "class" : "solr.DenseVectorField",
+            "vectorDimension": 384,
+            "similarityFunction": "cosine",
+            "knnAlgorithm": "hnsw"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "article_id",
+            "type": "string",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "text",
+            "type": "text_general",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "vector",
+            "type": "textVector",
+            "indexed": true,
+            "stored": true
+        }
+    ]
+}
