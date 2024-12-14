@@ -1,5 +1,32 @@
 {
-    "add-field-type": [
+	"add-field-type": [
+        {
+            "name":"regular_text",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.PorterStemFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true},
+                    {"class":"solr.FlattenGraphFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.PorterStemFilterFactory"},
+                    {"class":"solr.SynonymGraphFilterFactory", "synonyms": "my_synonyms.txt", "ignoreCase": true, "expand": true}
+                ]
+            }
+        },
         {
             "name" : "textVector",
             "class" : "solr.DenseVectorField",
@@ -10,14 +37,8 @@
     ],
     "add-field": [
         {
-            "name": "article_id",
-            "type": "string",
-            "indexed": true,
-            "stored": true
-        },
-        {
             "name": "text",
-            "type": "text_general",
+            "type": "regular_text",
             "indexed": true,
             "stored": true
         },
