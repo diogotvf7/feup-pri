@@ -1,13 +1,12 @@
 {
-    "query": "Tesla earnings report",
+    "query": "Apple stock forecast",
     "params": {
         "defType": "edismax",
         "qf": "title^3 body^2 authors",
         "pf": "title^3 author^2 body",
-        "fl": "id",
+        "fl": "id,score",
         "q.op": "AND",
         "indent": "true",
-        "rows": 20
+        "rows": 10
     }
 }
-  

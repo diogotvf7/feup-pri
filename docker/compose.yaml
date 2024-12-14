@@ -1,0 +1,24 @@
+services:
+  solr:
+    container_name: solr_pri
+    build: .
+    ports:
+     - "8983:8983"
+    volumes:
+      - stocks:/stocks
+      - data:/data
+    command: bash -c "sh /data/load.sh & solr-precreate stocks /stocks/conf"
+
+volumes:
+  data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/data
+      o: bind
+  stocks:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/stocks
+      o: bind
