@@ -34,11 +34,11 @@ cat ./queries/query4/qrels/qrels.txt | ./scripts/qrels2trec.py > ./queries/query
 ## Generate plots
 
 ```sh
-cat ./queries/query1/qrels/results_simple_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_simple.png && \
-cat ./queries/query1/qrels/results_complex_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_complex.png && \
-cat ./queries/query1/qrels/results_opt_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_opt.png && \
-cat ./queries/query1/qrels/results_semantic_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_semantic.png && \
-cat ./queries/query1/qrels/results_semantic_2_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_semantic_2.png
+cat ./queries/query4/qrels/results_simple_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_simple.png &&
+cat ./queries/query4/qrels/results_complex_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_complex.png &&
+cat ./queries/query4/qrels/results_opt_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_opt.png &&
+cat ./queries/query4/qrels/results_semantic_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_semantic.png &&
+cat ./queries/query4/qrels/results_semantic_2_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_semantic_2.png
 ```
 
 qrels (merge simple + complexo)
