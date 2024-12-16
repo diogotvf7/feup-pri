@@ -19,16 +19,16 @@ echo $QUERY
 # ../scripts/query_solr.py --query ../queries/query$QUERY_NUM/query${QUERY_NUM}_simple.json --uri http://localhost:8983/solr --collection stocks | \
 # ../scripts/solr2trec.py > ../queries/query$QUERY_NUM/qrels/results_simple_trec.txt
 
-# echo -e "\nStarting solr with complex schema"
-# ../database/start.sh
+echo -e "\nStarting solr with complex schema"
+../database/start.sh
 
-echo -e "\nQuerying Solr with complex query"
-../scripts/query_solr.py --query ../queries/query$QUERY_NUM/query${QUERY_NUM}_complex.json --uri http://localhost:8983/solr --collection stocks | \
-../scripts/solr2trec.py > ../queries/query$QUERY_NUM/qrels/results_complex_trec.txt
+# echo -e "\nQuerying Solr with complex query"
+# ../scripts/query_solr.py --query ../queries/query$QUERY_NUM/query${QUERY_NUM}_complex.json --uri http://localhost:8983/solr --collection stocks | \
+# ../scripts/solr2trec.py > ../queries/query$QUERY_NUM/qrels/results_complex_trec.txt
 
-# echo -e "\nQuerying Solr with optimised query"
-# ../scripts/query_solr.py --query ../queries/query$QUERY_NUM/query${QUERY_NUM}_opt.json --uri http://localhost:8983/solr --collection stocks | \
-# ../scripts/solr2trec.py > ../queries/query$QUERY_NUM/qrels/results_opt_trec.txt
+echo -e "\nQuerying Solr with optimised query"
+../scripts/query_solr.py --query ../queries/query$QUERY_NUM/query${QUERY_NUM}_opt.json --uri http://localhost:8983/solr --collection stocks | \
+../scripts/solr2trec.py > ../queries/query$QUERY_NUM/qrels/results_opt_trec.txt
 
 # echo -e "\nStarting solr with semantic schema"
 # ../database/start_semantic.sh
