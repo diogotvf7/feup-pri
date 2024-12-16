@@ -2,7 +2,7 @@
     "query": "US election effects on the stock market",
     "params": {
         "defType": "edismax",
-        "qf": "title^5 body^4 authors^2 stock_changes_name^3 sentiment_compound^1",
+        "qf": "title^5 body^4 stock_changes_name^3",
         "pf": "title^4 body^3 stock_changes_name^1",
         "ps": "2",
         "mm": "3<-2 6<75%",
@@ -10,6 +10,6 @@
         "q.op": "AND",
         "boost": "recip(ms(NOW,created_at),3.16e-11,1,1)",
         "fl": "id, score",
-        "rows": 20
+        "rows": 10
     }
 }
