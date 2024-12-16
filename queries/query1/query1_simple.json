@@ -1,6 +1,6 @@
 {
   "query": "Apple stock forecast",
-  "fields": "id",
+  "fields": "id, score",
   "params": {
       "defType": "edismax",
       "qf": "title body authors",

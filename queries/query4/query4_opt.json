@@ -9,7 +9,7 @@
         "tie": "0.1",
         "q.op": "AND",
         "boost": "recip(ms(NOW,created_at),3.16e-11,1,1)",
-        "fl": "id",
+        "fl": "id, score",
         "rows": 20
     }
 }

@@ -1,5 +1,5 @@
 {
-    "query": "Tesla earnings report",
+    "query": "US election effects on the stock market",
     "params": {
         "defType": "edismax",
         "qf": "title^5 body^4 authors^2 stock_changes_name^3 sentiment_compound^1",

@@ -27,11 +27,24 @@ cat ./queries/query1/qrels/qrels.txt | ./scripts/qrels2trec.py > ./queries/query
 ./src/trec_eval/trec_eval ./queries/query1/qrels/qrels_trec.txt ./queries/query1/qrels/results_complex_trec.txt > ./queries/query1/results/results_complex.txt
 ```
 
+```sh
+./src/trec_eval/trec_eval ./queries/query1/qrels/qrels_trec.txt ./queries/query1/qrels/results_opt_trec.txt > ./queries/query1/results/results_opt.txt
+./src/trec_eval/trec_eval ./queries/query1/qrels/qrels_trec.txt ./queries/query1/qrels/results_semantic_trec.txt > ./queries/query1/results/results_semantic.txt
+./src/trec_eval/trec_eval ./queries/query1/qrels/qrels_trec.txt ./queries/query1/qrels/results_semantic_2_trec.txt > ./queries/query1/results/results_semantic_2.txt
+```
+
+
 ## Generate plots
 
 ```sh
 cat ./queries/query1/qrels/results_simple_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_simple.png
 cat ./queries/query1/qrels/results_complex_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_complex.png
+```
+
+```sh
+cat ./queries/query1/qrels/results_opt_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_opt.png
+cat ./queries/query1/qrels/results_semantic_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_semantic.png
+cat ./queries/query1/qrels/results_semantic_2_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query1/qrels/qrels_trec.txt --output ./queries/query1/results/results_semantic_2.png
 ```
 
 qrels (merge simple + complexo)
