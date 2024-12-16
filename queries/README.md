@@ -17,34 +17,34 @@ coloca no results_simple e no results_complex
 juntar os dois ficheiros de resultados apenas com os que têm relevância 1 no qrels_trec.txt
 
 ```sh
-cat ./queries/query3/qrels/qrels.txt | ./scripts/qrels2trec.py > ./queries/query3/qrels/qrels_trec.txt
+cat ./queries/query4/qrels/qrels.txt | ./scripts/qrels2trec.py > ./queries/query4/qrels/qrels_trec.txt
 ```
 
 # Obter resultados
 
 ```sh
-./src/trec_eval/trec_eval ./queries/query3/qrels/qrels_trec.txt ./queries/query3/qrels/results_simple_trec.txt > ./queries/query3/results/results_simple.txt
-./src/trec_eval/trec_eval ./queries/query3/qrels/qrels_trec.txt ./queries/query3/qrels/results_complex_trec.txt > ./queries/query3/results/results_complex.txt
+./src/trec_eval/trec_eval ./queries/query4/qrels/qrels_trec.txt ./queries/query4/qrels/results_simple_trec.txt > ./queries/query4/results/results_simple.txt
+./src/trec_eval/trec_eval ./queries/query4/qrels/qrels_trec.txt ./queries/query4/qrels/results_complex_trec.txt > ./queries/query4/results/results_complex.txt
 ```
 
 ```sh
-./src/trec_eval/trec_eval ./queries/query3/qrels/qrels_trec.txt ./queries/query3/qrels/results_opt_trec.txt > ./queries/query3/results/results_opt.txt
-./src/trec_eval/trec_eval ./queries/query3/qrels/qrels_trec.txt ./queries/query3/qrels/results_semantic_trec.txt > ./queries/query3/results/results_semantic.txt
-./src/trec_eval/trec_eval ./queries/query3/qrels/qrels_trec.txt ./queries/query3/qrels/results_semantic_2_trec.txt > ./queries/query3/results/results_semantic_2.txt
+./src/trec_eval/trec_eval ./queries/query4/qrels/qrels_trec.txt ./queries/query4/qrels/results_opt_trec.txt > ./queries/query4/results/results_opt.txt
+./src/trec_eval/trec_eval ./queries/query4/qrels/qrels_trec.txt ./queries/query4/qrels/results_semantic_trec.txt > ./queries/query4/results/results_semantic.txt
+./src/trec_eval/trec_eval ./queries/query4/qrels/qrels_trec.txt ./queries/query4/qrels/results_semantic_2_trec.txt > ./queries/query4/results/results_semantic_2.txt
 ```
 
 
 ## Generate plots
 
 ```sh
-cat ./queries/query3/qrels/results_simple_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query3/qrels/qrels_trec.txt --output ./queries/query3/results/results_simple.png
-cat ./queries/query3/qrels/results_complex_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query3/qrels/qrels_trec.txt --output ./queries/query3/results/results_complex.png
+cat ./queries/query4/qrels/results_simple_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_simple.png
+cat ./queries/query4/qrels/results_complex_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_complex.png
 ```
 
 ```sh
-cat ./queries/query3/qrels/results_opt_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query3/qrels/qrels_trec.txt --output ./queries/query3/results/results_opt.png
-cat ./queries/query3/qrels/results_semantic_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query3/qrels/qrels_trec.txt --output ./queries/query3/results/results_semantic.png
-cat ./queries/query3/qrels/results_semantic_2_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query3/qrels/qrels_trec.txt --output ./queries/query3/results/results_semantic_2.png
+cat ./queries/query4/qrels/results_opt_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_opt.png
+cat ./queries/query4/qrels/results_semantic_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_semantic.png
+cat ./queries/query4/qrels/results_semantic_2_trec.txt | ./scripts/plot_pr.py --qrels ./queries/query4/qrels/qrels_trec.txt --output ./queries/query4/results/results_semantic_2.png
 ```
 
 qrels (merge simple + complexo)
