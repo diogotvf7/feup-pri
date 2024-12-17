@@ -1,17 +1,13 @@
 {
-    "query": "Apple stock forecast",
+    "query": "Apple Stock Forecast",
     "params": {
         "defType": "edismax",
-        "qf": "title^5 body^3 authors^2",
-        "pf": "title^4 body^2 authors^1",
-        "pf2": "title^2 body^1", 
-        "pf3": "title^1",
-        "mm": "2<-1 5<75%",
-        "tie": "0.1",
-        "boost": "",
+        "qf": "title^3 body^2 authors",
+        "pf": "title^3 author^2 body",
+        "fl": "id, score",
         "q.op": "AND",
-        "fl": "id",
         "indent": "true",
-        "rows": 10
-        }
+        "rows": 20
+    }
 }
+  
